@@ -1,4 +1,6 @@
 
+import 'package:flareline_crm/pages/auth/sign_in/sign_in_page.dart';
+import 'package:flareline_crm/pages/auth/sign_up/sign_up_page.dart';
 import 'package:flareline_crm/pages/home/crm_home_page.dart';
 import 'package:flutter/material.dart';
 
@@ -6,6 +8,8 @@ typedef PathWidgetBuilder = Widget Function(BuildContext, String?);
 
 final List<Map<String, Object>> MAIN_PAGES = [
   {'routerPath': '/', 'widget': CrmHomePage()},
+  {'routerPath': '/signIn', 'widget': SignInPage()},
+  {'routerPath': '/signUp', 'widget': SignUpPage()},
 ];
 
 class RouteConfiguration {

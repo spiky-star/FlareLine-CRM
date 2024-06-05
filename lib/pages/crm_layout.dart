@@ -41,7 +41,7 @@ abstract class CrmLayout extends FlarelineLayoutWidget {
     return CrmToolBarWidget(
       showMore: showDrawer,
       userInfoWidget: const CircleAvatar(
-        backgroundImage: AssetImage('assets/user/user-02.png',),
+        backgroundImage: AssetImage('assets/crm/user-02.png',),
         radius: 22,
       ),
     );

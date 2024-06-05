@@ -5,27 +5,27 @@
       {
         "icon": "assets/crm/dashboard.svg",
         "menuName": "Dashboard",
-        "path": "/crm/dashboard"
+        "path": "/"
       },
       {
         "icon": "assets/crm/contacts.svg",
         "menuName": "Contacts",
-        "path": "/crm/contacts"
+        "path": "/contacts"
       },
       {
         "icon": "assets/crm/accounts.svg",
         "menuName": "Accounts",
-        "path": "/crm/account"
+        "path": "/account"
       },
       {
         "icon": "assets/crm/deals.svg",
         "menuName": "Deals",
-        "path": "/crm/deals"
+        "path": "/deals"
       },
       {
         "icon": "assets/crm/task.svg",
         "menuName": "Task",
-        "path": "/crm/task"
+        "path": "/task"
       },
       {
         "icon": "assets/crm/calendar.svg",
@@ -33,15 +33,15 @@
         "childList": [
           {
             "menuName": "Day",
-            "path": "/crm/day"
+            "path": "/day"
           },
           {
             "menuName": "Week",
-            "path": "/crm/week"
+            "path": "/week"
           },
           {
             "menuName": "Month",
-            "path": "/crm/month"
+            "path": "/month"
           }
         ]
       },
@@ -51,23 +51,23 @@
         "childList": [
           {
             "menuName": "Report",
-            "path": "/crm/report"
+            "path": "/report"
           },
           {
             "menuName": "Sales",
-            "path": "/crm/sales"
+            "path": "/sales"
           },
           {
             "menuName": "Activity",
-            "path": "/crm/activity"
+            "path": "/activity"
           },
           {
             "menuName": "Pipeline",
-            "path": "/crm/pipeline"
+            "path": "/pipeline"
           },
           {
             "menuName": "Custom Reports",
-            "path": "/crm/customReports"
+            "path": "/customReports"
           }
         ]
       },
@@ -77,19 +77,27 @@
         "childList": [
           {
             "menuName": "User Settings",
-            "path": "/crm/userSettings"
+            "path": "/userSettings"
+          },
+          {
+            "menuName": "Sign Up",
+            "path": "/signUp"
+          },
+          {
+            "menuName": "Sign In",
+            "path": "/signIn"
           },
           {
             "menuName": "Account Settings",
-            "path": "/crm/accountSettings"
+            "path": "/accountSettings"
           },
           {
             "menuName": "Integrations",
-            "path": "/crm/integrations"
+            "path": "/integrations"
           },
           {
             "menuName": "Help & Support",
-            "path": "/crm/help"
+            "path": "/help"
           }
         ]
       }

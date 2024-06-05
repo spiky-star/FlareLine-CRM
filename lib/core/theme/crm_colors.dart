@@ -8,4 +8,5 @@ class CrmColors{
   static const Color primary = Color(0xFF316AFF);
   static const Color secondary = Color(0xFF01B7F9);
   static const Color orange = Color(0xFFFE8111);
+  static const Color border = Color(0xFFE5E8EC);
 }
