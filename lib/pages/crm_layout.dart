@@ -13,7 +13,9 @@ abstract class CrmLayout extends FlarelineLayoutWidget {
   String get appName => 'ezyCRM';
 
   @override
-  String get sideBarAsset => 'assets/crm/menu_route_en.json';
+  String sideBarAsset(BuildContext context){
+    return 'assets/crm/menu_route_en.json';
+  }
 
   @override
   String? get logoImageAsset => 'assets/crm/crm.png';
