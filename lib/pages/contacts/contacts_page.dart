@@ -21,13 +21,35 @@ class ContactsPage extends CrmLayout {
   }
 
   @override
+  Widget breakTabRightWidget(BuildContext context) {
+    // TODO: implement rightContentWidget
+    return  Row(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        SizedBox(
+          width: 150,
+          child: SelectWidget(
+            selectionList: const ['This Month', 'This Week', 'This Year'],
+          ),
+        ),
+        const SizedBox(
+          width: 20,
+        ),
+        SizedBox(
+          width: 150,
+          child: ButtonWidget(btnText: 'Add Contact +',type: ButtonType.primary.type,),
+        )
+      ],
+    );
+  }
+
+  @override
   Widget contentDesktopWidget(BuildContext context) {
     return ContactsTableWidget();
   }
 }
 
 class ContactsTableWidget extends TableWidget<ContactsViewModel> {
-
   @override
   // TODO: implement showCheckboxColumn
   bool get showCheckboxColumn => true;
