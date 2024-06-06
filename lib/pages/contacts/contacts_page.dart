@@ -27,10 +27,15 @@ class ContactsPage extends CrmLayout {
 }
 
 class ContactsTableWidget extends TableWidget<ContactsViewModel> {
+
+  @override
+  // TODO: implement showCheckboxColumn
+  bool get showCheckboxColumn => true;
+
   @override
   Widget toolsWidget(BuildContext context, ContactsViewModel viewModel) {
     return SizedBox(
-      height: 60,
+      height: 50,
       child: Row(
         children: [
           SizedBox(
@@ -42,6 +47,30 @@ class ContactsTableWidget extends TableWidget<ContactsViewModel> {
         ],
       ),
     );
+  }
+
+  @override
+  Widget? customWidgetsBuilder(BuildContext context,
+      TableDataRowsTableDataRows columnData, ContactsViewModel viewModel) {
+    if (columnData.columnName == 'leadScore') {
+      return Row(
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Container(
+            padding: EdgeInsets.symmetric(horizontal: 8, vertical: 5),
+            decoration: BoxDecoration(
+                color: Color(0xFFF6FFF5),
+                borderRadius: BorderRadius.circular(4)),
+            child: TagWidget(
+              color: Color(0xFF5ABE1C),
+              text: columnData.text ?? '',
+            ),
+          )
+        ],
+      );
+    }
+    return null;
   }
 
   _pageWidget(BuildContext context) {
@@ -78,23 +107,6 @@ class ContactsTableWidget extends TableWidget<ContactsViewModel> {
       ],
     );
   }
-
-  @override
-  Widget cellWidget(TableDataRowsTableDataRows columnData) {
-    if (columnData.dataType == CellDataType.CUSTOM.type) {
-      return Container(
-        padding: EdgeInsets.symmetric(horizontal: 6, vertical: 3),
-        decoration: BoxDecoration(
-            color: Color(0xFFF6FFF5), borderRadius: BorderRadius.circular(4)),
-        child: TagWidget(
-          color: Color(0xFF5ABE1C),
-          text: columnData.text ?? '',
-        ),
-      );
-    }
-    return super.cellWidgetcolumnData);
-  }
-
 
   @override
   ContactsViewModel viewModelBuilder(BuildContext context) {
