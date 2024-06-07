@@ -1,4 +1,3 @@
-
 import 'package:flareline_crm/components/card_data_widget.dart';
 import 'package:flareline_crm/core/theme/crm_colors.dart';
 import 'package:flareline_crm/pages/crm_layout.dart';
@@ -87,6 +86,7 @@ class CrmHomePage extends CrmLayout {
       child: LineChartWidget(
         isDropdownToggle: true,
         title: 'Sales Figures',
+        dropdownItems: const ['Daily', 'Weekly', 'Monthly'],
         datas: const [
           {
             'name': 'Marketing Sales',
