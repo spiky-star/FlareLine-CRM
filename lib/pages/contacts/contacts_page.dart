@@ -54,18 +54,19 @@ class ContactsTableWidget extends TableWidget<ContactsViewModel> {
   // TODO: implement showCheckboxColumn
   bool get showCheckboxColumn => true;
 
+
   @override
   Widget toolsWidget(BuildContext context, ContactsViewModel viewModel) {
     return SizedBox(
       height: 50,
       child: Row(
         children: [
-          SizedBox(
+          const SizedBox(
             width: 260,
             child: SearchWidget(),
           ),
-          Spacer(),
-          _pageWidget(context)
+          const Spacer(),
+          _pageWidget(context,viewModel)
         ],
       ),
     );
@@ -80,12 +81,12 @@ class ContactsTableWidget extends TableWidget<ContactsViewModel> {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Container(
-            padding: EdgeInsets.symmetric(horizontal: 8, vertical: 5),
+            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 5),
             decoration: BoxDecoration(
-                color: Color(0xFFF6FFF5),
+                color: const Color(0xFFF6FFF5),
                 borderRadius: BorderRadius.circular(4)),
             child: TagWidget(
-              color: Color(0xFF5ABE1C),
+              color: const Color(0xFF5ABE1C),
               text: columnData.text ?? '',
             ),
           )
@@ -95,7 +96,7 @@ class ContactsTableWidget extends TableWidget<ContactsViewModel> {
     return null;
   }
 
-  _pageWidget(BuildContext context) {
+  _pageWidget(BuildContext context,ContactsViewModel viewModel) {
     return Row(
       children: [
         const Text('Showing'),
@@ -105,7 +106,10 @@ class ContactsTableWidget extends TableWidget<ContactsViewModel> {
         SizedBox(
           width: 80,
           height: 30,
-          child: SelectWidget(selectionList: ['10', '20', '50']),
+          child: SelectWidget(selectionList: const ['10', '20', '50'],
+          onDropdownChanged: (value){
+            viewModel.pageSize = int.parse(value);
+          },),
         ),
         const SizedBox(
           width: 5,

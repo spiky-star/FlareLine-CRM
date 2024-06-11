@@ -20,15 +20,15 @@ class ContactListWidget extends TableWidget<ContactListViewModel> {
 
   @override
   Widget? toolsWidget(BuildContext context, ContactListViewModel viewModel) {
-    return Container(
+    return SizedBox(
       height: 60,
       child: Row(
         children: [
-          SizedBox(
+          const SizedBox(
             width: 280,
             child: SearchWidget(),
           ),
-          Spacer(),
+          const Spacer(),
           SizedBox(
             width: 200,
             child: SelectWidget(
@@ -49,11 +49,11 @@ class ContactListWidget extends TableWidget<ContactListViewModel> {
         Container(
           width: 40,
           height: 40,
-          child: Icon(Icons.more_horiz,size: 20,),
           alignment: Alignment.center,
           decoration: BoxDecoration(
               border: Border.all(color: Colors.black,width: 1)
           ),
+          child: const Icon(Icons.more_horiz,size: 20,),
         )
       ],
     );
