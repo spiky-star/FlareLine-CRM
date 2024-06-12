@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:flareline_crm/core/theme/crm_colors.dart';
 import 'package:flareline_uikit/components/forms/search_widget.dart';
 import 'package:flareline_uikit/components/forms/select_widget.dart';
 import 'package:flareline_uikit/components/image/image_widget.dart';
@@ -69,14 +70,21 @@ class ContactListWidget extends TableWidget<ContactListViewModel> {
       );
     }
 
-    if('status' == columnData.columnName){
+    if ('status' == columnData.columnName) {
       return Container(
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(4),
-          color:  Color(0xFFF2F6FF)
+            borderRadius: BorderRadius.circular(4),
+            color: columnData.text == 'Active'
+                ? Color(0xFFF6FFF5)
+                : Color(0xFFF2F6FF)),
+        padding: EdgeInsets.symmetric(horizontal: 10, vertical: 3),
+        child: Text(
+          columnData.text ?? '',
+          style: TextStyle(
+              color: columnData.text == 'Active'
+                  ? CrmColors.green
+                  : CrmColors.paragraph),
         ),
-        padding: EdgeInsets.symmetric(horizontal: 8,vertical: 3),
-        child: Text(columnData.text??''),
       );
     }
     return null;
@@ -88,16 +96,21 @@ class ContactListWidget extends TableWidget<ContactListViewModel> {
     return Row(
       mainAxisSize: MainAxisSize.min,
       children: [
-        Container(
-          width: 40,
-          height: 40,
-          alignment: Alignment.center,
-          decoration:
-              BoxDecoration(border: Border.all(color: Colors.black, width: 1)),
-          child: const Icon(
-            Icons.more_horiz,
-            size: 20,
+        InkWell(
+          child: Container(
+            width: 40,
+            height: 40,
+            alignment: Alignment.center,
+            decoration:
+            BoxDecoration(border: Border.all(color: CrmColors.border, width: 1)),
+            child: const Icon(
+              Icons.more_horiz,
+              size: 20,
+            ),
           ),
+          onTap: (){
+
+          },
         )
       ],
     );

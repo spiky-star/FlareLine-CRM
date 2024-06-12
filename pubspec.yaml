@@ -40,7 +40,7 @@ dependencies:
 
   responsive_builder: ^0.7.0
 
-  getwidget: ^4.0.0
+  syncfusion_flutter_charts: ^25.1.35
 
   flareline_uikit:
     git: https://github.com/FlutterFlareLine/FlareLine-UiKit.git

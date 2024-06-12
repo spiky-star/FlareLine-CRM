@@ -42,7 +42,7 @@
       {
         "columnName": "status",
         "text": "Mute",
-        "dataType": "tag",
+        "dataType": "custom",
         "tagType": "Secondary",
         "align": "center"
       },
@@ -74,7 +74,7 @@
       {
         "columnName": "status",
         "text": "Mute",
-        "dataType": "tag",
+        "dataType": "custom",
         "tagType": "Secondary",
         "align": "center"
       },
@@ -104,7 +104,7 @@
       {
         "columnName": "status",
         "text": "Active",
-        "dataType": "tag",
+        "dataType": "custom",
         "tagType": "Secondary",
         "align": "center"
       },

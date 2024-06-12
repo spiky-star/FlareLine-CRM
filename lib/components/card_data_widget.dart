@@ -1,9 +1,7 @@
-
 import 'package:flareline_crm/core/theme/crm_colors.dart';
 import 'package:flareline_uikit/components/card/common_card.dart';
 import 'package:flutter/material.dart';
-import 'package:getwidget/components/progress_bar/gf_progress_bar.dart';
-import 'package:getwidget/types/gf_progress_type.dart';
+import 'package:syncfusion_flutter_charts/charts.dart';
 
 class CardDataWidget extends StatelessWidget {
   final String imageAsset;
@@ -89,7 +87,9 @@ class CardDataWidget extends StatelessWidget {
                           color: isGrow ? CrmColors.green : CrmColors.red,
                           size: 18,
                         ),
-                        const SizedBox(width: 4,),
+                        const SizedBox(
+                          width: 4,
+                        ),
                         Text(
                           percent,
                           style: TextStyle(
@@ -116,18 +116,40 @@ class CardDataWidget extends StatelessWidget {
                       child: SizedBox(
                           width: 50,
                           height: 50,
-                          child: GFProgressBar(
-                            percentage: engagementPercent / 100,
-                            radius: 50,
-                            type: GFProgressType.circular,
-                            backgroundColor: Colors.grey.shade200,
-                            progressBarColor: engagementColor,
-                            child: Text(
-                              '$engagementPercent',
-                              style: const TextStyle(
-                                  fontSize: 11, color: Colors.black),
-                            ),
-                          ))),
+                          child: // Example 16
+                              SfCircularChart(
+                                  annotations: <CircularChartAnnotation>[
+                                CircularChartAnnotation(
+                                    widget: Text('$engagementPercent',
+                                        style: const TextStyle(
+                                            color: CrmColors.heading,
+                                            fontSize: 10)))
+                              ],
+                                  series: <CircularSeries>[
+                                DoughnutSeries<Map<String, dynamic>, String>(
+                                  dataSource: [
+                                    {
+                                      'x': 'data',
+                                      'y': engagementPercent,
+                                      'color': engagementColor
+                                    },
+                                    {
+                                      'x': 'a',
+                                      'y': 100 - engagementPercent,
+                                      'color': CrmColors.chartGray
+                                    }
+                                  ],
+                                  xValueMapper:
+                                      (Map<String, dynamic> data, _) =>
+                                          data['x'],
+                                  yValueMapper:
+                                      (Map<String, dynamic> data, _) =>
+                                          data['y'],
+                                  pointColorMapper: (data, _) => data['color'],
+                                  innerRadius: '80%',
+                                  radius: '140%',
+                                )
+                              ]))),
                   const SizedBox(
                     height: 10,
                   ),
