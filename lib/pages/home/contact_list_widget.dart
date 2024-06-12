@@ -8,6 +8,7 @@ import 'package:flareline_uikit/components/tables/table_widget.dart';
 import 'package:flareline_uikit/entity/table_data_entity.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:popover/popover.dart';
 
 class ContactListWidget extends TableWidget<ContactListViewModel> {
   @override
@@ -96,22 +97,7 @@ class ContactListWidget extends TableWidget<ContactListViewModel> {
     return Row(
       mainAxisSize: MainAxisSize.min,
       children: [
-        InkWell(
-          child: Container(
-            width: 40,
-            height: 40,
-            alignment: Alignment.center,
-            decoration:
-            BoxDecoration(border: Border.all(color: CrmColors.border, width: 1)),
-            child: const Icon(
-              Icons.more_horiz,
-              size: 20,
-            ),
-          ),
-          onTap: (){
-
-          },
-        )
+        MoreActionWidget()
       ],
     );
   }
@@ -119,6 +105,77 @@ class ContactListWidget extends TableWidget<ContactListViewModel> {
   @override
   ContactListViewModel viewModelBuilder(BuildContext context) {
     return ContactListViewModel(context);
+  }
+}
+
+class MoreActionWidget extends StatelessWidget{
+  const MoreActionWidget({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      child: Container(
+        width: 40,
+        height: 40,
+        alignment: Alignment.center,
+        decoration:
+        BoxDecoration(border: Border.all(color: CrmColors.border, width: 1)),
+        child: const Icon(
+          Icons.more_horiz,
+          size: 20,
+        ),
+      ),
+      onTap: (){
+        showPopover(
+          context: context,
+          bodyBuilder: (context) => const ListItems(),
+          onPop: () => print('Popover was popped!'),
+          direction: PopoverDirection.left,
+          width: 150,
+          height: 140,
+          arrowHeight: 15,
+          arrowWidth: 30,
+        );
+      },
+    );
+  }
+
+}
+
+class ListItems extends StatelessWidget {
+  const ListItems({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 8),
+      child: ListView(
+        padding: const EdgeInsets.all(8),
+        children: [
+          InkWell(
+            onTap: () {
+
+            },
+            child: Container(
+              height: 50,
+              color: CrmColors.green.withOpacity(0.5),
+              child: const Center(child: Text('Approve')),
+            ),
+          ),
+          const Divider(),
+          InkWell(
+            child: Container(
+              height: 50,
+              color: CrmColors.orange.withOpacity(0.5),
+              child: const Center(child: Text('Reject')),
+            ),
+            onTap: (){
+
+            },
+          )
+        ],
+      ),
+    );
   }
 }
 
