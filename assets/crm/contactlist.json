@@ -1,39 +1,68 @@
 {
   "headers": [
-    "First Name",
-    "Last Name",
-    "Email",
-    "Status",
-    "Last Access",
-    "Action"
+    {
+      "columnName": "First Name"
+    },
+    {
+      "columnName": "Last Name"
+    },
+    {
+      "columnName": "Email"
+    },
+    {
+      "columnName": "Status",
+      "align": "center"
+    },
+    {
+      "columnName": "Last Access"
+    },
+    {
+      "columnName": "Action",
+      "align": "center"
+    }
   ],
   "rows": [
     [
       {
-        "text": "Mitchell",
+        "columnName": "firstName",
+        "data": {
+          "name": "Tom",
+          "avatar": "assets/crm/avatartom.png"
+        },
         "dataType": "custom"
       },
       {
+        "columnName": "lastName",
         "text": "Edwards"
       },
       {
+        "columnName": "email",
         "text": "alma.lawson@example.com"
       },
       {
+        "columnName": "status",
         "text": "Mute",
         "dataType": "tag",
-        "tagType": "Secondary"
+        "tagType": "Secondary",
+        "align": "center"
       },
       {
+        "columnName": "lastAccess",
         "text": "Muted for 24 hours"
       },
       {
-        "dataType":"action"
+        "columnName": "action",
+        "dataType":"action",
+        "align": "center"
       }
     ],
     [
       {
-        "text": "Shawn",
+        "columnName": "firstName",
+        "data": {
+          "name": "Tom",
+          "avatar": "assets/crm/avatarshawn.png"
+        },
         "dataType": "custom"
       },
       {
@@ -43,20 +72,27 @@
         "text": "kenzi.lawson@example.com"
       },
       {
+        "columnName": "status",
         "text": "Mute",
         "dataType": "tag",
-        "tagType": "Secondary"
+        "tagType": "Secondary",
+        "align": "center"
       },
       {
         "text": "6 minutes ago"
       },
       {
-        "dataType":"action"
+        "dataType":"action",
+        "align": "center"
       }
     ],
     [
       {
-        "text": "affwaw",
+        "columnName": "firstName",
+        "data": {
+          "name": "Tom",
+          "avatar": "assets/crm/avataraffwaw.png"
+        },
         "dataType": "custom"
       },
       {
@@ -66,15 +102,18 @@
         "text": "richards.lawson@example.com"
       },
       {
+        "columnName": "status",
         "text": "Active",
         "dataType": "tag",
-        "tagType": "Secondary"
+        "tagType": "Secondary",
+        "align": "center"
       },
       {
         "text": "25 minutes ago"
       },
       {
-        "dataType":"action"
+        "dataType":"action",
+        "align": "center"
       }
     ]
   ]
