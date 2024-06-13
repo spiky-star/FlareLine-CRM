@@ -1,3 +1,4 @@
+import 'package:flareline_crm/pages/contacts/add_contact_page.dart';
 import 'package:flareline_crm/pages/crm_layout.dart';
 import 'package:flareline_uikit/components/buttons/button_widget.dart';
 import 'package:flareline_uikit/components/forms/search_widget.dart';
@@ -37,7 +38,7 @@ class ContactsPage extends CrmLayout {
         ),
         SizedBox(
           width: 150,
-          child: ButtonWidget(btnText: 'Add Contact +',type: ButtonType.primary.type,),
+          child:AddContactPage(),
         )
       ],
     );
