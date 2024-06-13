@@ -43,8 +43,8 @@ dependencies:
   syncfusion_flutter_charts: ^25.1.35
 
   flareline_uikit:
-#    git: https://github.com/FlutterFlareLine/FlareLine-UiKit.git
-    path: ../FlareLine-UiKit
+    git: https://github.com/FlutterFlareLine/FlareLine-UiKit.git
+#    path: ../FlareLine-UiKit
 
 dev_dependencies:
   flutter_test:
