@@ -3,10 +3,10 @@
 ```markdown
 # Flutter CRM Dashboard
 
-[![GitHub stars](https://img.shields.io/github/stars/spiky-star/FlareLine-CRM.svg)](https://github.com/spiky-star/FlareLine-CRM/stargazers)
-[![GitHub issues](https://img.shields.io/github/issues/spiky-star/FlareLine-CRM.svg)](https://github.com/spiky-star/FlareLine-CRM/issues)
-[![GitHub license](https://img.shields.io/github/license/spiky-star/FlareLine-CRM.svg)](https://github.com/spiky-star/FlareLine-CRM/blob/master/LICENSE)
-[![Flutter](https://img.shields.io/badge/Flutter-%5E2.0.0-deepskyblue.svg)](https://flutter.dev/)
+![image](https://img.shields.io/github/stars/spiky-star/FlareLine-CRM.svg)(https://github.com/spiky-star/FlareLine-CRM/stargazers)
+![image](https://img.shields.io/github/issues/spiky-star/FlareLine-CRM.svg)(https://github.com/spiky-star/FlareLine-CRM/issues)
+![image](https://img.shields.io/github/license/spiky-star/FlareLine-CRM.svg)(https://github.com/spiky-star/FlareLine-CRM/blob/master/LICENSE)
+![image](https://img.shields.io/badge/Flutter-%5E2.0.0-deepskyblue.svg)(https://flutter.dev/)
 
 ## Overview
 
