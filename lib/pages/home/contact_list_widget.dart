@@ -11,9 +11,15 @@ import 'package:flutter/services.dart';
 import 'package:popover/popover.dart';
 
 class ContactListWidget extends TableWidget<ContactListViewModel> {
+  final bool? showTitle;
+  final bool? showPage;
+  final String? json;
+
+  ContactListWidget({super.key, this.showTitle,this.showPage, this.json});
+
   @override
   // TODO: implement showPaging
-  bool get showPaging => false;
+  bool get showPaging => (showPage??false);
 
   @override
   // TODO: implement showCheckboxColumn
@@ -24,9 +30,9 @@ class ContactListWidget extends TableWidget<ContactListViewModel> {
   double get rowHeight => 80;
 
   @override
-  String title(BuildContext context) {
+  String? title(BuildContext context) {
     // TODO: implement title
-    return 'Contact List';
+    return (showTitle ?? true) ? 'Contact List' : null;
   }
 
   @override
@@ -94,21 +100,19 @@ class ContactListWidget extends TableWidget<ContactListViewModel> {
   @override
   Widget? actionWidgetsBuilder(BuildContext context,
       TableDataRowsTableDataRows columnData, ContactListViewModel viewModel) {
-    return Row(
+    return const Row(
       mainAxisSize: MainAxisSize.min,
-      children: [
-        MoreActionWidget()
-      ],
+      children: [MoreActionWidget()],
     );
   }
 
   @override
   ContactListViewModel viewModelBuilder(BuildContext context) {
-    return ContactListViewModel(context);
+    return ContactListViewModel(context,json);
   }
 }
 
-class MoreActionWidget extends StatelessWidget{
+class MoreActionWidget extends StatelessWidget {
   const MoreActionWidget({super.key});
 
   @override
@@ -118,14 +122,14 @@ class MoreActionWidget extends StatelessWidget{
         width: 40,
         height: 40,
         alignment: Alignment.center,
-        decoration:
-        BoxDecoration(border: Border.all(color: CrmColors.border, width: 1)),
+        decoration: BoxDecoration(
+            border: Border.all(color: CrmColors.border, width: 1)),
         child: const Icon(
           Icons.more_horiz,
           size: 20,
         ),
       ),
-      onTap: (){
+      onTap: () {
         showPopover(
           context: context,
           bodyBuilder: (context) => const ListItems(),
@@ -139,7 +143,6 @@ class MoreActionWidget extends StatelessWidget{
       },
     );
   }
-
 }
 
 class ListItems extends StatelessWidget {
@@ -153,9 +156,7 @@ class ListItems extends StatelessWidget {
         padding: const EdgeInsets.all(8),
         children: [
           InkWell(
-            onTap: () {
-
-            },
+            onTap: () {},
             child: Container(
               height: 50,
               color: CrmColors.green.withOpacity(0.5),
@@ -169,9 +170,7 @@ class ListItems extends StatelessWidget {
               color: CrmColors.orange.withOpacity(0.5),
               child: const Center(child: Text('Reject')),
             ),
-            onTap: (){
-
-            },
+            onTap: () {},
           )
         ],
       ),
@@ -180,11 +179,12 @@ class ListItems extends StatelessWidget {
 }
 
 class ContactListViewModel extends BaseTableProvider {
-  ContactListViewModel(super.context);
+  String? jsonFile;
+  ContactListViewModel(super.context,this.jsonFile);
 
   @override
   loadData(BuildContext context) async {
-    String res = await rootBundle.loadString('assets/crm/contactlist.json');
+    String res = await rootBundle.loadString(jsonFile??'assets/crm/contactlist.json');
 
     Map<String, dynamic> map = json.decode(res);
     TableDataEntity tableDataEntity = TableDataEntity.fromJson(map);

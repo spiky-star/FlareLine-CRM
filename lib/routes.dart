@@ -3,6 +3,7 @@ import 'package:flareline_crm/deferred_widget.dart';
 import 'package:flareline_crm/pages/auth/sign_in/sign_in_page.dart' deferred as signIn;
 import 'package:flareline_crm/pages/auth/sign_up/sign_up_page.dart' deferred as signUp;
 import 'package:flareline_crm/pages/contacts/contacts_page.dart' deferred as contacts;
+import 'package:flareline_crm/pages/account/account_page.dart' deferred as account;
 import 'package:flareline_crm/pages/home/crm_home_page.dart';
 import 'package:flutter/material.dart';
 
@@ -13,6 +14,7 @@ final List<Map<String, Object>> MAIN_PAGES = [
   {'routerPath': '/signIn', 'widget': DeferredWidget(signIn.loadLibrary, () => signIn.SignInPage())},
   {'routerPath': '/signUp', 'widget': DeferredWidget(signUp.loadLibrary, () => signUp.SignUpPage())},
   {'routerPath': '/contacts', 'widget': DeferredWidget(contacts.loadLibrary, () => contacts.ContactsPage())},
+  {'routerPath': '/account', 'widget': DeferredWidget(account.loadLibrary, () => account.AccountPage())},
 ];
 
 class RouteConfiguration {

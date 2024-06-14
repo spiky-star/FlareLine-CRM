@@ -11,6 +11,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
 class ContactsPage extends CrmLayout {
+  const ContactsPage({super.key});
+
   @override
   // TODO: implement isContentScroll
   bool get isContentScroll => false;

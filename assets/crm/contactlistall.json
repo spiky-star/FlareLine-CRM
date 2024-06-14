@@ -1,0 +1,1200 @@
+{
+  "headers": [
+    {
+      "columnName": "First Name"
+    },
+    {
+      "columnName": "Last Name"
+    },
+    {
+      "columnName": "Email"
+    },
+    {
+      "columnName": "Status",
+      "align": "center"
+    },
+    {
+      "columnName": "Last Access"
+    },
+    {
+      "columnName": "Action",
+      "align": "center"
+    }
+  ],
+  "rows": [
+    [
+      {
+        "columnName": "firstName",
+        "data": {
+          "name": "Tom",
+          "avatar": "assets/crm/avatartom.png"
+        },
+        "dataType": "custom"
+      },
+      {
+        "columnName": "lastName",
+        "text": "Edwards"
+      },
+      {
+        "columnName": "email",
+        "text": "alma.lawson@example.com"
+      },
+      {
+        "columnName": "status",
+        "text": "Mute",
+        "dataType": "custom",
+        "tagType": "Secondary",
+        "align": "center"
+      },
+      {
+        "columnName": "lastAccess",
+        "text": "Muted for 24 hours"
+      },
+      {
+        "columnName": "action",
+        "dataType":"action",
+        "align": "center"
+      }
+    ],
+    [
+      {
+        "columnName": "firstName",
+        "data": {
+          "name": "Tom",
+          "avatar": "assets/crm/avatarshawn.png"
+        },
+        "dataType": "custom"
+      },
+      {
+        "text": "Richards"
+      },
+      {
+        "text": "kenzi.lawson@example.com"
+      },
+      {
+        "columnName": "status",
+        "text": "Mute",
+        "dataType": "custom",
+        "tagType": "Secondary",
+        "align": "center"
+      },
+      {
+        "text": "6 minutes ago"
+      },
+      {
+        "dataType":"action",
+        "align": "center"
+      }
+    ],
+    [
+      {
+        "columnName": "firstName",
+        "data": {
+          "name": "Tom",
+          "avatar": "assets/crm/avataraffwaw.png"
+        },
+        "dataType": "custom"
+      },
+      {
+        "text": "Richards"
+      },
+      {
+        "text": "richards.lawson@example.com"
+      },
+      {
+        "columnName": "status",
+        "text": "Active",
+        "dataType": "custom",
+        "tagType": "Secondary",
+        "align": "center"
+      },
+      {
+        "text": "25 minutes ago"
+      },
+      {
+        "dataType":"action",
+        "align": "center"
+      }
+    ],
+    [
+      {
+        "columnName": "firstName",
+        "data": {
+          "name": "Tom",
+          "avatar": "assets/crm/avataraffwaw.png"
+        },
+        "dataType": "custom"
+      },
+      {
+        "text": "Richards"
+      },
+      {
+        "text": "richards.lawson@example.com"
+      },
+      {
+        "columnName": "status",
+        "text": "Active",
+        "dataType": "custom",
+        "tagType": "Secondary",
+        "align": "center"
+      },
+      {
+        "text": "25 minutes ago"
+      },
+      {
+        "dataType":"action",
+        "align": "center"
+      }
+    ],
+    [
+      {
+        "columnName": "firstName",
+        "data": {
+          "name": "Tom",
+          "avatar": "assets/crm/avataraffwaw.png"
+        },
+        "dataType": "custom"
+      },
+      {
+        "text": "Richards"
+      },
+      {
+        "text": "richards.lawson@example.com"
+      },
+      {
+        "columnName": "status",
+        "text": "Active",
+        "dataType": "custom",
+        "tagType": "Secondary",
+        "align": "center"
+      },
+      {
+        "text": "25 minutes ago"
+      },
+      {
+        "dataType":"action",
+        "align": "center"
+      }
+    ],
+    [
+      {
+        "columnName": "firstName",
+        "data": {
+          "name": "Tom",
+          "avatar": "assets/crm/avataraffwaw.png"
+        },
+        "dataType": "custom"
+      },
+      {
+        "text": "Richards"
+      },
+      {
+        "text": "richards.lawson@example.com"
+      },
+      {
+        "columnName": "status",
+        "text": "Active",
+        "dataType": "custom",
+        "tagType": "Secondary",
+        "align": "center"
+      },
+      {
+        "text": "25 minutes ago"
+      },
+      {
+        "dataType":"action",
+        "align": "center"
+      }
+    ],
+    [
+      {
+        "columnName": "firstName",
+        "data": {
+          "name": "Tom",
+          "avatar": "assets/crm/avataraffwaw.png"
+        },
+        "dataType": "custom"
+      },
+      {
+        "text": "Richards"
+      },
+      {
+        "text": "richards.lawson@example.com"
+      },
+      {
+        "columnName": "status",
+        "text": "Active",
+        "dataType": "custom",
+        "tagType": "Secondary",
+        "align": "center"
+      },
+      {
+        "text": "25 minutes ago"
+      },
+      {
+        "dataType":"action",
+        "align": "center"
+      }
+    ],
+    [
+      {
+        "columnName": "firstName",
+        "data": {
+          "name": "Tom",
+          "avatar": "assets/crm/avataraffwaw.png"
+        },
+        "dataType": "custom"
+      },
+      {
+        "text": "Richards"
+      },
+      {
+        "text": "richards.lawson@example.com"
+      },
+      {
+        "columnName": "status",
+        "text": "Active",
+        "dataType": "custom",
+        "tagType": "Secondary",
+        "align": "center"
+      },
+      {
+        "text": "25 minutes ago"
+      },
+      {
+        "dataType":"action",
+        "align": "center"
+      }
+    ],
+    [
+      {
+        "columnName": "firstName",
+        "data": {
+          "name": "Tom",
+          "avatar": "assets/crm/avataraffwaw.png"
+        },
+        "dataType": "custom"
+      },
+      {
+        "text": "Richards"
+      },
+      {
+        "text": "richards.lawson@example.com"
+      },
+      {
+        "columnName": "status",
+        "text": "Active",
+        "dataType": "custom",
+        "tagType": "Secondary",
+        "align": "center"
+      },
+      {
+        "text": "25 minutes ago"
+      },
+      {
+        "dataType":"action",
+        "align": "center"
+      }
+    ],
+    [
+      {
+        "columnName": "firstName",
+        "data": {
+          "name": "Tom",
+          "avatar": "assets/crm/avataraffwaw.png"
+        },
+        "dataType": "custom"
+      },
+      {
+        "text": "Richards"
+      },
+      {
+        "text": "richards.lawson@example.com"
+      },
+      {
+        "columnName": "status",
+        "text": "Active",
+        "dataType": "custom",
+        "tagType": "Secondary",
+        "align": "center"
+      },
+      {
+        "text": "25 minutes ago"
+      },
+      {
+        "dataType":"action",
+        "align": "center"
+      }
+    ],
+    [
+      {
+        "columnName": "firstName",
+        "data": {
+          "name": "Tom",
+          "avatar": "assets/crm/avataraffwaw.png"
+        },
+        "dataType": "custom"
+      },
+      {
+        "text": "Richards"
+      },
+      {
+        "text": "richards.lawson@example.com"
+      },
+      {
+        "columnName": "status",
+        "text": "Active",
+        "dataType": "custom",
+        "tagType": "Secondary",
+        "align": "center"
+      },
+      {
+        "text": "25 minutes ago"
+      },
+      {
+        "dataType":"action",
+        "align": "center"
+      }
+    ],
+    [
+      {
+        "columnName": "firstName",
+        "data": {
+          "name": "Tom",
+          "avatar": "assets/crm/avataraffwaw.png"
+        },
+        "dataType": "custom"
+      },
+      {
+        "text": "Richards"
+      },
+      {
+        "text": "richards.lawson@example.com"
+      },
+      {
+        "columnName": "status",
+        "text": "Active",
+        "dataType": "custom",
+        "tagType": "Secondary",
+        "align": "center"
+      },
+      {
+        "text": "25 minutes ago"
+      },
+      {
+        "dataType":"action",
+        "align": "center"
+      }
+    ],
+    [
+      {
+        "columnName": "firstName",
+        "data": {
+          "name": "Tom",
+          "avatar": "assets/crm/avataraffwaw.png"
+        },
+        "dataType": "custom"
+      },
+      {
+        "text": "Richards"
+      },
+      {
+        "text": "richards.lawson@example.com"
+      },
+      {
+        "columnName": "status",
+        "text": "Active",
+        "dataType": "custom",
+        "tagType": "Secondary",
+        "align": "center"
+      },
+      {
+        "text": "25 minutes ago"
+      },
+      {
+        "dataType":"action",
+        "align": "center"
+      }
+    ],
+    [
+      {
+        "columnName": "firstName",
+        "data": {
+          "name": "Tom",
+          "avatar": "assets/crm/avataraffwaw.png"
+        },
+        "dataType": "custom"
+      },
+      {
+        "text": "Richards"
+      },
+      {
+        "text": "richards.lawson@example.com"
+      },
+      {
+        "columnName": "status",
+        "text": "Active",
+        "dataType": "custom",
+        "tagType": "Secondary",
+        "align": "center"
+      },
+      {
+        "text": "25 minutes ago"
+      },
+      {
+        "dataType":"action",
+        "align": "center"
+      }
+    ],
+    [
+      {
+        "columnName": "firstName",
+        "data": {
+          "name": "Tom",
+          "avatar": "assets/crm/avataraffwaw.png"
+        },
+        "dataType": "custom"
+      },
+      {
+        "text": "Richards"
+      },
+      {
+        "text": "richards.lawson@example.com"
+      },
+      {
+        "columnName": "status",
+        "text": "Active",
+        "dataType": "custom",
+        "tagType": "Secondary",
+        "align": "center"
+      },
+      {
+        "text": "25 minutes ago"
+      },
+      {
+        "dataType":"action",
+        "align": "center"
+      }
+    ],
+    [
+      {
+        "columnName": "firstName",
+        "data": {
+          "name": "Tom",
+          "avatar": "assets/crm/avataraffwaw.png"
+        },
+        "dataType": "custom"
+      },
+      {
+        "text": "Richards"
+      },
+      {
+        "text": "richards.lawson@example.com"
+      },
+      {
+        "columnName": "status",
+        "text": "Active",
+        "dataType": "custom",
+        "tagType": "Secondary",
+        "align": "center"
+      },
+      {
+        "text": "25 minutes ago"
+      },
+      {
+        "dataType":"action",
+        "align": "center"
+      }
+    ],
+    [
+      {
+        "columnName": "firstName",
+        "data": {
+          "name": "Tom",
+          "avatar": "assets/crm/avataraffwaw.png"
+        },
+        "dataType": "custom"
+      },
+      {
+        "text": "Richards"
+      },
+      {
+        "text": "richards.lawson@example.com"
+      },
+      {
+        "columnName": "status",
+        "text": "Active",
+        "dataType": "custom",
+        "tagType": "Secondary",
+        "align": "center"
+      },
+      {
+        "text": "25 minutes ago"
+      },
+      {
+        "dataType":"action",
+        "align": "center"
+      }
+    ],
+    [
+      {
+        "columnName": "firstName",
+        "data": {
+          "name": "Tom",
+          "avatar": "assets/crm/avataraffwaw.png"
+        },
+        "dataType": "custom"
+      },
+      {
+        "text": "Richards"
+      },
+      {
+        "text": "richards.lawson@example.com"
+      },
+      {
+        "columnName": "status",
+        "text": "Active",
+        "dataType": "custom",
+        "tagType": "Secondary",
+        "align": "center"
+      },
+      {
+        "text": "25 minutes ago"
+      },
+      {
+        "dataType":"action",
+        "align": "center"
+      }
+    ],
+    [
+      {
+        "columnName": "firstName",
+        "data": {
+          "name": "Tom",
+          "avatar": "assets/crm/avataraffwaw.png"
+        },
+        "dataType": "custom"
+      },
+      {
+        "text": "Richards"
+      },
+      {
+        "text": "richards.lawson@example.com"
+      },
+      {
+        "columnName": "status",
+        "text": "Active",
+        "dataType": "custom",
+        "tagType": "Secondary",
+        "align": "center"
+      },
+      {
+        "text": "25 minutes ago"
+      },
+      {
+        "dataType":"action",
+        "align": "center"
+      }
+    ],
+    [
+      {
+        "columnName": "firstName",
+        "data": {
+          "name": "Tom",
+          "avatar": "assets/crm/avataraffwaw.png"
+        },
+        "dataType": "custom"
+      },
+      {
+        "text": "Richards"
+      },
+      {
+        "text": "richards.lawson@example.com"
+      },
+      {
+        "columnName": "status",
+        "text": "Active",
+        "dataType": "custom",
+        "tagType": "Secondary",
+        "align": "center"
+      },
+      {
+        "text": "25 minutes ago"
+      },
+      {
+        "dataType":"action",
+        "align": "center"
+      }
+    ],
+    [
+      {
+        "columnName": "firstName",
+        "data": {
+          "name": "Tom",
+          "avatar": "assets/crm/avataraffwaw.png"
+        },
+        "dataType": "custom"
+      },
+      {
+        "text": "Richards"
+      },
+      {
+        "text": "richards.lawson@example.com"
+      },
+      {
+        "columnName": "status",
+        "text": "Active",
+        "dataType": "custom",
+        "tagType": "Secondary",
+        "align": "center"
+      },
+      {
+        "text": "25 minutes ago"
+      },
+      {
+        "dataType":"action",
+        "align": "center"
+      }
+    ],
+    [
+      {
+        "columnName": "firstName",
+        "data": {
+          "name": "Tom",
+          "avatar": "assets/crm/avataraffwaw.png"
+        },
+        "dataType": "custom"
+      },
+      {
+        "text": "Richards"
+      },
+      {
+        "text": "richards.lawson@example.com"
+      },
+      {
+        "columnName": "status",
+        "text": "Active",
+        "dataType": "custom",
+        "tagType": "Secondary",
+        "align": "center"
+      },
+      {
+        "text": "25 minutes ago"
+      },
+      {
+        "dataType":"action",
+        "align": "center"
+      }
+    ],
+    [
+      {
+        "columnName": "firstName",
+        "data": {
+          "name": "Tom",
+          "avatar": "assets/crm/avataraffwaw.png"
+        },
+        "dataType": "custom"
+      },
+      {
+        "text": "Richards"
+      },
+      {
+        "text": "richards.lawson@example.com"
+      },
+      {
+        "columnName": "status",
+        "text": "Active",
+        "dataType": "custom",
+        "tagType": "Secondary",
+        "align": "center"
+      },
+      {
+        "text": "25 minutes ago"
+      },
+      {
+        "dataType":"action",
+        "align": "center"
+      }
+    ],
+    [
+      {
+        "columnName": "firstName",
+        "data": {
+          "name": "Tom",
+          "avatar": "assets/crm/avataraffwaw.png"
+        },
+        "dataType": "custom"
+      },
+      {
+        "text": "Richards"
+      },
+      {
+        "text": "richards.lawson@example.com"
+      },
+      {
+        "columnName": "status",
+        "text": "Active",
+        "dataType": "custom",
+        "tagType": "Secondary",
+        "align": "center"
+      },
+      {
+        "text": "25 minutes ago"
+      },
+      {
+        "dataType":"action",
+        "align": "center"
+      }
+    ],
+    [
+      {
+        "columnName": "firstName",
+        "data": {
+          "name": "Tom",
+          "avatar": "assets/crm/avataraffwaw.png"
+        },
+        "dataType": "custom"
+      },
+      {
+        "text": "Richards"
+      },
+      {
+        "text": "richards.lawson@example.com"
+      },
+      {
+        "columnName": "status",
+        "text": "Active",
+        "dataType": "custom",
+        "tagType": "Secondary",
+        "align": "center"
+      },
+      {
+        "text": "25 minutes ago"
+      },
+      {
+        "dataType":"action",
+        "align": "center"
+      }
+    ],
+    [
+      {
+        "columnName": "firstName",
+        "data": {
+          "name": "Tom",
+          "avatar": "assets/crm/avataraffwaw.png"
+        },
+        "dataType": "custom"
+      },
+      {
+        "text": "Richards"
+      },
+      {
+        "text": "richards.lawson@example.com"
+      },
+      {
+        "columnName": "status",
+        "text": "Active",
+        "dataType": "custom",
+        "tagType": "Secondary",
+        "align": "center"
+      },
+      {
+        "text": "25 minutes ago"
+      },
+      {
+        "dataType":"action",
+        "align": "center"
+      }
+    ],
+    [
+      {
+        "columnName": "firstName",
+        "data": {
+          "name": "Tom",
+          "avatar": "assets/crm/avataraffwaw.png"
+        },
+        "dataType": "custom"
+      },
+      {
+        "text": "Richards"
+      },
+      {
+        "text": "richards.lawson@example.com"
+      },
+      {
+        "columnName": "status",
+        "text": "Active",
+        "dataType": "custom",
+        "tagType": "Secondary",
+        "align": "center"
+      },
+      {
+        "text": "25 minutes ago"
+      },
+      {
+        "dataType":"action",
+        "align": "center"
+      }
+    ],
+    [
+      {
+        "columnName": "firstName",
+        "data": {
+          "name": "Tom",
+          "avatar": "assets/crm/avataraffwaw.png"
+        },
+        "dataType": "custom"
+      },
+      {
+        "text": "Richards"
+      },
+      {
+        "text": "richards.lawson@example.com"
+      },
+      {
+        "columnName": "status",
+        "text": "Active",
+        "dataType": "custom",
+        "tagType": "Secondary",
+        "align": "center"
+      },
+      {
+        "text": "25 minutes ago"
+      },
+      {
+        "dataType":"action",
+        "align": "center"
+      }
+    ],
+    [
+      {
+        "columnName": "firstName",
+        "data": {
+          "name": "Tom",
+          "avatar": "assets/crm/avataraffwaw.png"
+        },
+        "dataType": "custom"
+      },
+      {
+        "text": "Richards"
+      },
+      {
+        "text": "richards.lawson@example.com"
+      },
+      {
+        "columnName": "status",
+        "text": "Active",
+        "dataType": "custom",
+        "tagType": "Secondary",
+        "align": "center"
+      },
+      {
+        "text": "25 minutes ago"
+      },
+      {
+        "dataType":"action",
+        "align": "center"
+      }
+    ],
+    [
+      {
+        "columnName": "firstName",
+        "data": {
+          "name": "Tom",
+          "avatar": "assets/crm/avataraffwaw.png"
+        },
+        "dataType": "custom"
+      },
+      {
+        "text": "Richards"
+      },
+      {
+        "text": "richards.lawson@example.com"
+      },
+      {
+        "columnName": "status",
+        "text": "Active",
+        "dataType": "custom",
+        "tagType": "Secondary",
+        "align": "center"
+      },
+      {
+        "text": "25 minutes ago"
+      },
+      {
+        "dataType":"action",
+        "align": "center"
+      }
+    ],
+    [
+      {
+        "columnName": "firstName",
+        "data": {
+          "name": "Tom",
+          "avatar": "assets/crm/avataraffwaw.png"
+        },
+        "dataType": "custom"
+      },
+      {
+        "text": "Richards"
+      },
+      {
+        "text": "richards.lawson@example.com"
+      },
+      {
+        "columnName": "status",
+        "text": "Active",
+        "dataType": "custom",
+        "tagType": "Secondary",
+        "align": "center"
+      },
+      {
+        "text": "25 minutes ago"
+      },
+      {
+        "dataType":"action",
+        "align": "center"
+      }
+    ],
+    [
+      {
+        "columnName": "firstName",
+        "data": {
+          "name": "Tom",
+          "avatar": "assets/crm/avataraffwaw.png"
+        },
+        "dataType": "custom"
+      },
+      {
+        "text": "Richards"
+      },
+      {
+        "text": "richards.lawson@example.com"
+      },
+      {
+        "columnName": "status",
+        "text": "Active",
+        "dataType": "custom",
+        "tagType": "Secondary",
+        "align": "center"
+      },
+      {
+        "text": "25 minutes ago"
+      },
+      {
+        "dataType":"action",
+        "align": "center"
+      }
+    ],
+    [
+      {
+        "columnName": "firstName",
+        "data": {
+          "name": "Tom",
+          "avatar": "assets/crm/avataraffwaw.png"
+        },
+        "dataType": "custom"
+      },
+      {
+        "text": "Richards"
+      },
+      {
+        "text": "richards.lawson@example.com"
+      },
+      {
+        "columnName": "status",
+        "text": "Active",
+        "dataType": "custom",
+        "tagType": "Secondary",
+        "align": "center"
+      },
+      {
+        "text": "25 minutes ago"
+      },
+      {
+        "dataType":"action",
+        "align": "center"
+      }
+    ],
+    [
+      {
+        "columnName": "firstName",
+        "data": {
+          "name": "Tom",
+          "avatar": "assets/crm/avataraffwaw.png"
+        },
+        "dataType": "custom"
+      },
+      {
+        "text": "Richards"
+      },
+      {
+        "text": "richards.lawson@example.com"
+      },
+      {
+        "columnName": "status",
+        "text": "Active",
+        "dataType": "custom",
+        "tagType": "Secondary",
+        "align": "center"
+      },
+      {
+        "text": "25 minutes ago"
+      },
+      {
+        "dataType":"action",
+        "align": "center"
+      }
+    ],
+    [
+      {
+        "columnName": "firstName",
+        "data": {
+          "name": "Tom",
+          "avatar": "assets/crm/avataraffwaw.png"
+        },
+        "dataType": "custom"
+      },
+      {
+        "text": "Richards"
+      },
+      {
+        "text": "richards.lawson@example.com"
+      },
+      {
+        "columnName": "status",
+        "text": "Active",
+        "dataType": "custom",
+        "tagType": "Secondary",
+        "align": "center"
+      },
+      {
+        "text": "25 minutes ago"
+      },
+      {
+        "dataType":"action",
+        "align": "center"
+      }
+    ],
+    [
+      {
+        "columnName": "firstName",
+        "data": {
+          "name": "Tom",
+          "avatar": "assets/crm/avataraffwaw.png"
+        },
+        "dataType": "custom"
+      },
+      {
+        "text": "Richards"
+      },
+      {
+        "text": "richards.lawson@example.com"
+      },
+      {
+        "columnName": "status",
+        "text": "Active",
+        "dataType": "custom",
+        "tagType": "Secondary",
+        "align": "center"
+      },
+      {
+        "text": "25 minutes ago"
+      },
+      {
+        "dataType":"action",
+        "align": "center"
+      }
+    ],
+    [
+      {
+        "columnName": "firstName",
+        "data": {
+          "name": "Tom",
+          "avatar": "assets/crm/avataraffwaw.png"
+        },
+        "dataType": "custom"
+      },
+      {
+        "text": "Richards"
+      },
+      {
+        "text": "richards.lawson@example.com"
+      },
+      {
+        "columnName": "status",
+        "text": "Active",
+        "dataType": "custom",
+        "tagType": "Secondary",
+        "align": "center"
+      },
+      {
+        "text": "25 minutes ago"
+      },
+      {
+        "dataType":"action",
+        "align": "center"
+      }
+    ],
+    [
+      {
+        "columnName": "firstName",
+        "data": {
+          "name": "Tom",
+          "avatar": "assets/crm/avataraffwaw.png"
+        },
+        "dataType": "custom"
+      },
+      {
+        "text": "Richards"
+      },
+      {
+        "text": "richards.lawson@example.com"
+      },
+      {
+        "columnName": "status",
+        "text": "Active",
+        "dataType": "custom",
+        "tagType": "Secondary",
+        "align": "center"
+      },
+      {
+        "text": "25 minutes ago"
+      },
+      {
+        "dataType":"action",
+        "align": "center"
+      }
+    ],
+    [
+      {
+        "columnName": "firstName",
+        "data": {
+          "name": "Tom",
+          "avatar": "assets/crm/avataraffwaw.png"
+        },
+        "dataType": "custom"
+      },
+      {
+        "text": "Richards"
+      },
+      {
+        "text": "richards.lawson@example.com"
+      },
+      {
+        "columnName": "status",
+        "text": "Active",
+        "dataType": "custom",
+        "tagType": "Secondary",
+        "align": "center"
+      },
+      {
+        "text": "25 minutes ago"
+      },
+      {
+        "dataType":"action",
+        "align": "center"
+      }
+    ]
+  ]
+}
