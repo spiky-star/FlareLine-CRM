@@ -44,6 +44,8 @@ dependencies:
 
   faker: ^2.1.0
 
+  flutter_image_stack: ^0.0.7
+
   flareline_uikit:
     git: https://github.com/FlutterFlareLine/FlareLine-UiKit.git
 #    path: ../FlareLine-UiKit
