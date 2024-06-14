@@ -1,5 +1,6 @@
 import 'package:flareline_crm/core/theme/crm_colors.dart';
 import 'package:flareline_uikit/components/buttons/button_widget.dart';
+import 'package:flareline_uikit/components/forms/drop_zone_widget.dart';
 import 'package:flareline_uikit/components/forms/outborder_text_form_field.dart';
 import 'package:flareline_uikit/components/image/image_widget.dart';
 import 'package:flareline_uikit/components/modal/modal_dialog.dart';
@@ -31,50 +32,80 @@ class AddContactPage extends BaseStlessWidget<AddContactViewModel> {
                 Row(
                   children: [
                     Expanded(
-                        child: textFieldWidget('First Name','first_name.svg')),
+                        child: textFieldWidget('First Name', 'first_name.svg')),
                     const SizedBox(
                       width: 12,
                     ),
                     Expanded(
-                        child: textFieldWidget('Last Name','first_name.svg'))
+                        child: textFieldWidget('Last Name', 'first_name.svg'))
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 12,
                 ),
-                textFieldWidget('Primary Email','email.svg'),
-                SizedBox(
+                textFieldWidget('Primary Email', 'email.svg'),
+                const SizedBox(
                   height: 12,
                 ),
-                textFieldWidget('Phone Number','tel.svg'),
-                SizedBox(
+                textFieldWidget('Phone Number', 'tel.svg'),
+                const SizedBox(
                   height: 12,
                 ),
-                textFieldWidget('Location','location.svg'),
-                SizedBox(
+                textFieldWidget('Location', 'location.svg'),
+                const SizedBox(
                   height: 12,
                 ),
                 Row(
                   children: [
                     Expanded(
-                        child: textFieldWidget('Add Home Email Address','home_address.svg')),
+                        child: textFieldWidget(
+                            'Add Home Email Address', 'home_address.svg')),
                     const SizedBox(
                       width: 12,
                     ),
                     Expanded(
-                        child: textFieldWidget('Add Workd Email Address','email.svg'))
+                        child: textFieldWidget(
+                            'Add Workd Email Address', 'email.svg'))
                   ],
                 ),
+                const SizedBox(
+                  height: 12,
+                ),
+                const Divider(),
+                const SizedBox(
+                  height: 12,
+                ),
+                Container(
+                  alignment: Alignment.centerLeft,
+                  child: const Text('Add A Photo Of Business Logo Of Your Contact',style: TextStyle(color: CrmColors.paragraph,fontSize: 12),),
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                SizedBox(
+                  height: 150,
+                  child: DropZoneWidget(
+                    text: const Text(
+                      'Select or Drop File',
+                      style: TextStyle(fontSize: 14, color: CrmColors.primary),
+                    ),
+                    icon: const ImageWidget(
+                      imageUrl: 'assets/crm/upload.svg',
+                      width: 23,
+                      height: 23,
+                    ),
+                  ),
+                )
               ],
             ));
       },
     );
   }
 
-  Widget textFieldWidget(String hint, String svg){
+  Widget textFieldWidget(String hint, String svg) {
     return OutBorderTextFormField(
         hintText: hint,
-        hintStyle: const TextStyle(fontSize: 14,color: CrmColors.paragraph),
+        hintStyle: const TextStyle(fontSize: 14, color: CrmColors.paragraph),
         icon: Container(
           child: ImageWidget(
             imageUrl: 'assets/crm/$svg',
