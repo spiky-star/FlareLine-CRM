@@ -1,7 +1,7 @@
-import 'package:flareline_crm/core/theme/crm_colors.dart';
+
 import 'package:flareline_crm/core/theme/global_theme.dart';
 import 'package:flareline_crm/routes.dart';
-import 'package:flareline_uikit/service/sidebar_provider.dart';
+import 'package:flareline_uikit/service/localization_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
         providers: [
           //theme
-          ChangeNotifierProvider(create: (_) => SideBarProvider(_)),
+          ChangeNotifierProvider(create: (_) => LocalizationProvider(_)),
         ],
         child: MaterialApp(
           title: 'Flutter CRM',
