@@ -61,9 +61,6 @@ Follow these instructions to get a copy of the project up and running on your lo
   flutter run -d ios
   ```
 
-## Usage
-
-[Provide a brief guide on how to navigate through the CRM dashboard.]
 
 ## Contributing
 
