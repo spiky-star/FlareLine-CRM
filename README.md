@@ -5,8 +5,7 @@
 
 
 ## Overview
-
-Flutter CRM Dashboard is a cross-platform Customer Relationship Management application developed using Flutter. It aims to provide a seamless experience across Web, Windows, macOS, Android, and iOS. Currently in the development phase, this project offers a free version that serves as a dashboard and template for users to utilize and extend.
+Futter CRM Dashboard is a cross-platform Customer Relationship Management application developed using Flutter. It aims to provide a seamless experience across Web, Windows, macOS, Android, and iOS. Currently in the development phase, this project offers a free version that serves as a dashboard and template for users to utilize and extend.
 
 ## Features
 
