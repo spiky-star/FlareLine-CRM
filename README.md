@@ -16,7 +16,8 @@ Flutter CRM Dashboard is a cross-platform Customer Relationship Management appli
 - **Customizable Template**: Easily adapt the template to fit specific business needs.
 
 ## Screenshots
-[Insert screenshots here]
+![screenshot1.png](screenshot%2Fscreenshot1.png)
+![screenshot2.png](screenshot%2Fscreenshot2.png)
 
 ## Getting Started
 
