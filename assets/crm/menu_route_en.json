@@ -88,16 +88,8 @@
             "path": "/signIn"
           },
           {
-            "menuName": "Account Settings",
-            "path": "/accountSettings"
-          },
-          {
             "menuName": "Integrations",
             "path": "/integrations"
-          },
-          {
-            "menuName": "Help & Support",
-            "path": "/help"
           }
         ]
       }

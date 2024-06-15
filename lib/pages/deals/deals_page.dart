@@ -3,7 +3,6 @@ import 'package:flareline_crm/core/theme/crm_colors.dart';
 import 'package:flareline_crm/pages/crm_layout.dart';
 import 'package:flareline_crm/pages/deals/add_deals_widget.dart';
 import 'package:flareline_uikit/components/card/common_card.dart';
-import 'package:flareline_uikit/components/forms/select_widget.dart';
 import 'package:flareline_uikit/components/image/image_widget.dart';
 import 'package:flareline_uikit/service/base_provider.dart';
 import 'package:flareline_uikit/widget/base/base_stless_widget.dart';
@@ -63,7 +62,7 @@ class DealsPageView extends BaseStlessWidget<DealsViewModel> {
             CrmColors.primary,
             List.generate(20, (i) {
               return {
-                "image": 'https://picsum.photos/200',
+                "image": 'https://picsum.photos/200?id=${faker.guid.guid()}',
                 "title": faker.company.name(),
                 "value": r'$40,000',
                 "pro": '20%',
@@ -78,7 +77,7 @@ class DealsPageView extends BaseStlessWidget<DealsViewModel> {
             CrmColors.sky,
             List.generate(20, (i) {
               return {
-                "image": 'https://picsum.photos/200',
+                "image": 'https://picsum.photos/200?id=${faker.guid.guid()}',
                 "title": faker.company.name(),
                 "value": r'$40,000',
                 "pro": '20%',
@@ -93,7 +92,7 @@ class DealsPageView extends BaseStlessWidget<DealsViewModel> {
             CrmColors.orange,
             List.generate(20, (i) {
               return {
-                "image": 'https://picsum.photos/200',
+                "image": 'https://picsum.photos/200?id=${faker.guid.guid()}',
                 "title": faker.company.name(),
                 "value": r'$40,000',
                 "pro": '20%',
@@ -108,7 +107,7 @@ class DealsPageView extends BaseStlessWidget<DealsViewModel> {
             CrmColors.green,
             List.generate(20, (i) {
               return {
-                "image": 'https://picsum.photos/200',
+                "image": 'https://picsum.photos/200?id=${faker.guid.guid()}',
                 "title": faker.company.name(),
                 "value": r'$40,000',
                 "pro": '20%',

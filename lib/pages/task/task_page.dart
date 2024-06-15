@@ -68,8 +68,8 @@ class TaskPageView extends BaseStlessWidget<TaskViewModel> {
                 "task": faker.job.title(),
                 "days": faker.date.month(),
                 "users": [
-                  'https://picsum.photos/200',
-                  'https://picsum.photos/200'
+                  'https://picsum.photos/200?id=${faker.guid.guid()}',
+                  'https://picsum.photos/200?id=${faker.guid.guid()}'
                 ]
               };
             })),
@@ -86,8 +86,8 @@ class TaskPageView extends BaseStlessWidget<TaskViewModel> {
                 "task": faker.job.title(),
                 "days": faker.date.month(),
                 "users": [
-                  'https://picsum.photos/200',
-                  'https://picsum.photos/200'
+                  'https://picsum.photos/200?id=${faker.guid.guid()}',
+                  'https://picsum.photos/200?id=${faker.guid.guid()}'
                 ]
               };
             })),
@@ -104,8 +104,8 @@ class TaskPageView extends BaseStlessWidget<TaskViewModel> {
                 "task": faker.job.title(),
                 "days": faker.date.month(),
                 "users": [
-                  'https://picsum.photos/200',
-                  'https://picsum.photos/200'
+                  'https://picsum.photos/200?id=${faker.guid.guid()}',
+                  'https://picsum.photos/200?id=${faker.guid.guid()}'
                 ]
               };
             })),
@@ -122,8 +122,8 @@ class TaskPageView extends BaseStlessWidget<TaskViewModel> {
                 "task": faker.job.title(),
                 "days": faker.date.month(),
                 "users": [
-                  'https://picsum.photos/200',
-                  'https://picsum.photos/200'
+                  'https://picsum.photos/200?id=${faker.guid.guid()}',
+                  'https://picsum.photos/200?id=${faker.guid.guid()}'
                 ]
               };
             })),
@@ -183,15 +183,6 @@ class TaskPageView extends BaseStlessWidget<TaskViewModel> {
   }
 
   itemBuilder(BuildContext ctx, int index, element, Color tagColor) {
-    // List<Widget> usersAvatar = [];
-    // for (String avatar in element['users']) {
-    //   usersAvatar.add(ImageWidget(
-    //     imageUrl: avatar,
-    //     isCircle: true,
-    //     width: 32,
-    //     height: 32,
-    //   ));
-    // }
 
     return CommonCard(
       width: 300,
