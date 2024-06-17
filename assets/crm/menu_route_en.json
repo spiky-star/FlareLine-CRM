@@ -54,20 +54,12 @@
             "path": "/report"
           },
           {
-            "menuName": "Sales",
-            "path": "/sales"
-          },
-          {
             "menuName": "Activity",
             "path": "/activity"
           },
           {
             "menuName": "Pipeline",
             "path": "/pipeline"
-          },
-          {
-            "menuName": "Custom Reports",
-            "path": "/customReports"
           }
         ]
       },
