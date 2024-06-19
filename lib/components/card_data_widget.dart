@@ -49,12 +49,16 @@ class CardDataWidget extends StatelessWidget {
                 children: [
                   Text(
                     title,
+                    overflow: TextOverflow.ellipsis,
                     style: const TextStyle(fontSize: 16),
                   ),
                   const SizedBox(
                     height: 6,
                   ),
-                  Text(desc)
+                  Text(
+                    desc,
+                    overflow: TextOverflow.ellipsis,
+                  )
                 ],
               )
             ],

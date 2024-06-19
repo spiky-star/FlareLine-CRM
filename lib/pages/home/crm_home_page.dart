@@ -18,6 +18,37 @@ class CrmHomePage extends CrmLayout {
   }
 
   @override
+  Widget contentMobileWidget(BuildContext context) {
+    // TODO: implement contentMobileWidget
+    return Column(
+      children: [
+        _topToolsWidget(),
+        const SizedBox(
+          height: 20,
+        ),
+        SizedBox(
+          height: 400,
+          child: _lineChart(),
+        ),
+        SizedBox(
+          height: 20,
+        ),
+        SizedBox(
+          height: 400,
+          child: _circleBarWidget(),
+        ),
+        const SizedBox(
+          height: 20,
+        ),
+        SizedBox(
+          height: 500,
+          child: ContactListWidget(),
+        ),
+      ],
+    );
+  }
+
+  @override
   Widget contentDesktopWidget(BuildContext context) {
     return Column(
       children: [
@@ -26,46 +57,23 @@ class CrmHomePage extends CrmLayout {
           child: Row(
             children: [
               Expanded(
+                  flex: 3,
                   child: Column(
-                children: [
-                  _topToolsWidget(),
-                  const SizedBox(
-                    height: 20,
-                  ),
-                  _lineChart()
-                ],
-              )),
+                    children: [
+                      _topToolsWidgetDesk(),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      _lineChart()
+                    ],
+                  )),
               const SizedBox(
                 width: 20,
               ),
-              SizedBox(
-                  width: 400,
-                  child: CommonCard(
-                    child: CircularhartWidget(
-                      title: 'Sorce Of Purchases',
-                      position: LegendPosition.bottom,
-                      orientation: LegendItemOrientation.vertical,
-                      palette: const [
-                        CrmColors.orange,
-                        CrmColors.secondary,
-                        CrmColors.primary
-                      ],
-                      chartData: const [
-                        {
-                          'x': 'Social Media',
-                          'y': 33,
-                        },
-                        {
-                          'x': 'Direct Search',
-                          'y': 33,
-                        },
-                        {
-                          'x': 'Others',
-                          'y': 34,
-                        },
-                      ],
-                    ),
-                  ))
+              Expanded(
+                child: SizedBox(width: 400, child: _circleBarWidget()),
+                flex: 1,
+              )
             ],
           ),
         ),
@@ -77,6 +85,35 @@ class CrmHomePage extends CrmLayout {
           child: ContactListWidget(),
         ),
       ],
+    );
+  }
+
+  CommonCard _circleBarWidget() {
+    return CommonCard(
+      child: CircularhartWidget(
+        title: 'Sorce Of Purchases',
+        position: LegendPosition.bottom,
+        orientation: LegendItemOrientation.vertical,
+        palette: const [
+          CrmColors.orange,
+          CrmColors.secondary,
+          CrmColors.primary
+        ],
+        chartData: const [
+          {
+            'x': 'Social Media',
+            'y': 33,
+          },
+          {
+            'x': 'Direct Search',
+            'y': 33,
+          },
+          {
+            'x': 'Others',
+            'y': 34,
+          },
+        ],
+      ),
     );
   }
 
@@ -166,7 +203,34 @@ class CrmHomePage extends CrmLayout {
     List<Widget> widgets = [];
     for (int i = 0; i < datas.length; i++) {
       dynamic item = datas[i];
-      widgets.add(Expanded(
+      widgets.add(CardDataWidget(
+        imageAsset: item['imageAsset'],
+        title: item['title'],
+        desc: item['desc'],
+        price: item['price'],
+        percent: item['percent'],
+        isGrow: item['isGrow'],
+        engagementColor: item['engagementColor'],
+        engagementPercent: item['engagementPercent'],
+      ));
+    }
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        Wrap(
+          children: widgets,
+          spacing: 20,
+          runSpacing: 20,
+        )
+      ],
+    );
+  }
+
+  Widget _topToolsWidgetDesk() {
+    List<Widget> widgets = [];
+    for (int i = 0; i < datas.length; i++) {
+      dynamic item = datas[i];
+      widgets.add(Expanded(child: Container(
         child: CardDataWidget(
           imageAsset: item['imageAsset'],
           title: item['title'],
@@ -177,11 +241,9 @@ class CrmHomePage extends CrmLayout {
           engagementColor: item['engagementColor'],
           engagementPercent: item['engagementPercent'],
         ),
-      ));
-      if (i < datas.length - 1) {
-        widgets.add(const SizedBox(
-          width: 20,
-        ));
+      )));
+      if(i<datas.length-1){
+        widgets.add(SizedBox(width: 20,));
       }
     }
     return Column(
