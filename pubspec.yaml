@@ -46,6 +46,8 @@ dependencies:
 
   flutter_image_stack: ^0.0.7
 
+  syncfusion_flutter_calendar: any
+
   flareline_uikit:
     git: https://github.com/FlutterFlareLine/FlareLine-UiKit.git
 #    path: ../FlareLine-UiKit

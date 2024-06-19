@@ -52,14 +52,6 @@
           {
             "menuName": "Report",
             "path": "/report"
-          },
-          {
-            "menuName": "Activity",
-            "path": "/activity"
-          },
-          {
-            "menuName": "Pipeline",
-            "path": "/pipeline"
           }
         ]
       },
