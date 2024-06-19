@@ -10,6 +10,8 @@ import 'package:flareline_crm/pages/settings/user_settings_page.dart' deferred a
 import 'package:flareline_crm/pages/integrations/integrations_page.dart' deferred as integrations;
 import 'package:flareline_crm/pages/report/report_page.dart' deferred as report;
 import 'package:flareline_crm/pages/calendar/day_calendar_page.dart' deferred as dayCalendar;
+import 'package:flareline_crm/pages/calendar/week_calendar_page.dart' deferred as weekCalendar;
+import 'package:flareline_crm/pages/calendar/month_calendar_page.dart' deferred as monthCalendar;
 import 'package:flareline_crm/pages/home/crm_home_page.dart';
 import 'package:flutter/material.dart';
 
@@ -27,6 +29,8 @@ final List<Map<String, Object>> MAIN_PAGES = [
   {'routerPath': '/integrations', 'widget': DeferredWidget(integrations.loadLibrary, () => integrations.IntegrationsPage())},
   {'routerPath': '/report', 'widget': DeferredWidget(report.loadLibrary, () => report.ReportPage())},
   {'routerPath': '/day', 'widget': DeferredWidget(dayCalendar.loadLibrary, () => dayCalendar.DayCalendarPage())},
+  {'routerPath': '/week', 'widget': DeferredWidget(weekCalendar.loadLibrary, () => weekCalendar.WeekCalendarPage())},
+  {'routerPath': '/month', 'widget': DeferredWidget(monthCalendar.loadLibrary, () => monthCalendar.MonthCalendarPage())},
 ];
 
 class RouteConfiguration {
