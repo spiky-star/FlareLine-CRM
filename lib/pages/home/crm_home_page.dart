@@ -64,7 +64,7 @@ class CrmHomePage extends CrmLayout {
                       const SizedBox(
                         height: 20,
                       ),
-                      _lineChart()
+                      Expanded(child: _lineChart())
                     ],
                   )),
               const SizedBox(
@@ -118,8 +118,7 @@ class CrmHomePage extends CrmLayout {
   }
 
   Widget _lineChart() {
-    return Expanded(
-        child: CommonCard(
+    return CommonCard(
       child: LineChartWidget(
         isDropdownToggle: true,
         title: 'Sales Figures',
@@ -163,7 +162,7 @@ class CrmHomePage extends CrmLayout {
           },
         ],
       ),
-    ));
+    );
   }
 
   final List<Map<String, dynamic>> datas = const [
@@ -230,7 +229,8 @@ class CrmHomePage extends CrmLayout {
     List<Widget> widgets = [];
     for (int i = 0; i < datas.length; i++) {
       dynamic item = datas[i];
-      widgets.add(Expanded(child: Container(
+      widgets.add(Expanded(
+          child: Container(
         child: CardDataWidget(
           imageAsset: item['imageAsset'],
           title: item['title'],
@@ -242,8 +242,10 @@ class CrmHomePage extends CrmLayout {
           engagementPercent: item['engagementPercent'],
         ),
       )));
-      if(i<datas.length-1){
-        widgets.add(SizedBox(width: 20,));
+      if (i < datas.length - 1) {
+        widgets.add(SizedBox(
+          width: 20,
+        ));
       }
     }
     return Column(
