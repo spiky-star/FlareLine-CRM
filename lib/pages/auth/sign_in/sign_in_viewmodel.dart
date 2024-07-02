@@ -25,4 +25,11 @@ class SignInViewModel extends BlocBaseViewModel<SignInState> {
       state.loginStatus = false;
     }
   }
+
+  @override
+  void onSafeDispose() {
+    emailController.dispose();
+    passwordController.dispose();
+    super.onSafeDispose();
+  }
 }

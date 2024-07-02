@@ -31,4 +31,12 @@ class SignUpViewModel extends BlocBaseViewModel<SignUpState> {
 
     Navigator.of(context).popAndPushNamed('/signUp');
   }
+
+  @override
+  void onSafeDispose() {
+    emailController.dispose();
+    passwordController.dispose();
+    rePasswordController.dispose();
+    super.onSafeDispose();
+  }
 }
