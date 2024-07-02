@@ -1,18 +1,17 @@
-
-import 'package:flareline_uikit/service/base_provider.dart';
+import 'package:flareline_crm/pages/auth/sign_up/sign_up_state.dart';
+import 'package:flareline_uikit/service/bloc/bloc_base_viewmodel.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get_storage/get_storage.dart';
 
-
-class SignUpProvider extends BaseProvider {
+class SignUpViewModel extends BlocBaseViewModel<SignUpState> {
   final box = GetStorage();
 
   late TextEditingController emailController;
   late TextEditingController passwordController;
   late TextEditingController rePasswordController;
 
-  SignUpProvider(super.context) {
+  SignUpViewModel(BuildContext context) : super(context, SignUpState()) {
     emailController = TextEditingController();
     passwordController = TextEditingController();
     rePasswordController = TextEditingController();

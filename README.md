@@ -13,6 +13,12 @@ Futter CRM Dashboard is a cross-platform Customer Relationship Management applic
 - **Responsive Design**: Adapts to various screen sizes and orientations.
 - **Free to Use**: The dashboard is available for free to encourage community contributions and use.
 - **Customizable Template**: Easily adapt the template to fit specific business needs.
+- **Bloc / Provider
+
+## Branches
+
+- **crm-provider**: used default provider state management
+- **main**: used flutter_bloc state management
 
 ## Screenshots
 ![screenshot1.png](screenshot%2Fscreenshot1.png)

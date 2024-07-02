@@ -2,10 +2,11 @@ import 'package:faker/faker.dart';
 import 'package:flareline_crm/core/theme/crm_colors.dart';
 import 'package:flareline_crm/pages/crm_layout.dart';
 import 'package:flareline_crm/pages/task/add_task_widget.dart';
+import 'package:flareline_crm/pages/task/task_state.dart';
+import 'package:flareline_crm/pages/task/task_viewmodel.dart';
 import 'package:flareline_uikit/components/card/common_card.dart';
 import 'package:flareline_uikit/components/image/image_widget.dart';
-import 'package:flareline_uikit/service/base_provider.dart';
-import 'package:flareline_uikit/widget/base/base_stless_widget.dart';
+import 'package:flareline_uikit/widget/base/bloc_base_stless_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_image_stack/flutter_image_stack.dart';
@@ -43,12 +44,12 @@ class TasksPage extends CrmLayout {
   }
 }
 
-class TaskPageView extends BaseStlessWidget<TaskViewModel> {
+class TaskPageView extends BlocBaseStlessWidget<TaskViewModel, TaskState> {
   TaskPageView({super.key});
 
   @override
   Widget bodyWidget(
-      BuildContext context, TaskViewModel viewModel, Widget? child) {
+      BuildContext context, TaskViewModel viewModel, TaskState state) {
     var faker = new Faker();
 
     return Wrap(
@@ -280,6 +281,3 @@ class TaskPageView extends BaseStlessWidget<TaskViewModel> {
   }
 }
 
-class TaskViewModel extends BaseProvider {
-  TaskViewModel(super.context);
-}

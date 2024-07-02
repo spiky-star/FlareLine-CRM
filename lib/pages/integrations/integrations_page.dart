@@ -2,11 +2,12 @@ import 'package:faker/faker.dart';
 import 'package:flareline_crm/core/theme/crm_colors.dart';
 import 'package:flareline_crm/pages/crm_layout.dart';
 import 'package:flareline_crm/pages/integrations/add_integrations_widget.dart';
+import 'package:flareline_crm/pages/integrations/integrations_state.dart';
+import 'package:flareline_crm/pages/integrations/integrations_viewmodel.dart';
 import 'package:flareline_uikit/components/buttons/button_widget.dart';
 import 'package:flareline_uikit/components/card/common_card.dart';
 import 'package:flareline_uikit/components/image/image_widget.dart';
-import 'package:flareline_uikit/service/base_provider.dart';
-import 'package:flareline_uikit/widget/base/base_stless_widget.dart';
+import 'package:flareline_uikit/widget/base/bloc_base_stless_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
@@ -43,12 +44,12 @@ class IntegrationsPage extends CrmLayout {
   }
 }
 
-class IntegrationsPageView extends BaseStlessWidget<IntegrationsViewModel> {
+class IntegrationsPageView extends BlocBaseStlessWidget<IntegrationsViewModel,IntegrationsState> {
   IntegrationsPageView({super.key});
 
   @override
   Widget bodyWidget(
-      BuildContext context, IntegrationsViewModel viewModel, Widget? child) {
+      BuildContext context, IntegrationsViewModel viewModel, IntegrationsState state) {
     var faker = new Faker();
     List<Widget> list = List.generate(50, (i) {
       return {
@@ -150,6 +151,4 @@ class IntegrationsPageView extends BaseStlessWidget<IntegrationsViewModel> {
   }
 }
 
-class IntegrationsViewModel extends BaseProvider {
-  IntegrationsViewModel(super.context);
-}
+

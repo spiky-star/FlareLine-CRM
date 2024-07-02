@@ -1,6 +1,7 @@
 import 'package:flareline_crm/core/theme/crm_colors.dart';
-import 'package:flareline_crm/pages/auth/sign_up/sign_up_provider.dart';
-import 'package:flareline_uikit/widget/base/base_stless_widget.dart';
+import 'package:flareline_crm/pages/auth/sign_up/sign_up_state.dart';
+import 'package:flareline_crm/pages/auth/sign_up/sign_up_viewmodel.dart';
+import 'package:flareline_uikit/widget/base/bloc_base_stless_widget.dart';
 import 'package:flutter/material.dart';
 
 import 'package:flutter_svg/svg.dart';
@@ -9,10 +10,10 @@ import 'package:flareline_uikit/components/card/common_card.dart';
 import 'package:flareline_uikit/components/forms/outborder_text_form_field.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
-class SignUpPage extends BaseStlessWidget<SignUpProvider> {
+class SignUpPage extends BlocBaseStlessWidget<SignUpViewModel, SignUpState> {
   @override
   Widget bodyWidget(
-      BuildContext context, SignUpProvider viewModel, Widget? child) {
+      BuildContext context, SignUpViewModel viewModel, SignUpState state) {
     return Scaffold(body: ResponsiveBuilder(
       builder: (context, sizingInformation) {
         // Check the sizing information here and return your UI
@@ -28,11 +29,11 @@ class SignUpPage extends BaseStlessWidget<SignUpProvider> {
   }
 
   @override
-  SignUpProvider viewModelBuilder(BuildContext context) {
-    return SignUpProvider(context);
+  SignUpViewModel viewModelBuilder(BuildContext context) {
+    return SignUpViewModel(context);
   }
 
-  Widget contentDesktopWidget(BuildContext context, SignUpProvider viewModel) {
+  Widget contentDesktopWidget(BuildContext context, SignUpViewModel viewModel) {
     return Column(mainAxisSize: MainAxisSize.min, children: [
       Row(mainAxisSize: MainAxisSize.min, children: [
         SizedBox(
@@ -51,14 +52,14 @@ class SignUpPage extends BaseStlessWidget<SignUpProvider> {
     ]);
   }
 
-  Widget contentMobileWidget(BuildContext context, SignUpProvider viewModel) {
+  Widget contentMobileWidget(BuildContext context, SignUpViewModel viewModel) {
     return CommonCard(
       padding: const EdgeInsets.symmetric(vertical: 60),
       child: _formWidget(context, viewModel),
     );
   }
 
-  Widget _formWidget(BuildContext context, SignUpProvider viewModel) {
+  Widget _formWidget(BuildContext context, SignUpViewModel viewModel) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
       child: Column(
