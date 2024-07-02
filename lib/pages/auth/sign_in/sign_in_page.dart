@@ -1,7 +1,7 @@
 import 'package:flareline_crm/core/theme/crm_colors.dart';
-import 'package:flareline_crm/pages/auth/sign_in/sign_in_provider.dart';
-import 'package:flareline_crm/pages/auth/sign_up/sign_up_provider.dart';
-import 'package:flareline_uikit/widget/base/base_stless_widget.dart';
+import 'package:flareline_crm/pages/auth/sign_in/sign_in_viewmodel.dart';
+import 'package:flareline_crm/pages/auth/sign_in/sign_in_state.dart';
+import 'package:flareline_uikit/widget/base/bloc_base_stless_widget.dart';
 import 'package:flutter/material.dart';
 
 import 'package:flutter_svg/svg.dart';
@@ -10,56 +10,58 @@ import 'package:flareline_uikit/components/card/common_card.dart';
 import 'package:flareline_uikit/components/forms/outborder_text_form_field.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
-class SignInPage extends BaseStlessWidget<SignInProvider> {
+class SignInPage extends BlocBaseStlessWidget<SignInViewModel, SignInState> {
   @override
   Widget bodyWidget(
-      BuildContext context, SignInProvider viewModel, Widget? child) {
+      BuildContext context, SignInViewModel viewModel, SignInState state) {
     return Scaffold(body: ResponsiveBuilder(
       builder: (context, sizingInformation) {
         // Check the sizing information here and return your UI
         if (sizingInformation.deviceScreenType == DeviceScreenType.desktop) {
           return Center(
-            child: contentDesktopWidget(context, viewModel),
+            child: contentDesktopWidget(context, viewModel, state),
           );
         }
 
-        return contentMobileWidget(context, viewModel);
+        return contentMobileWidget(context, viewModel, state);
       },
     ));
   }
 
   @override
-  SignInProvider viewModelBuilder(BuildContext context) {
-    return SignInProvider(context);
+  SignInViewModel viewModelBuilder(BuildContext context) {
+    return SignInViewModel(context);
   }
 
-  Widget contentDesktopWidget(BuildContext context, SignInProvider viewModel) {
+  Widget contentDesktopWidget(
+      BuildContext context, SignInViewModel viewModel, SignInState state) {
     return Column(mainAxisSize: MainAxisSize.min, children: [
       Row(mainAxisSize: MainAxisSize.min, children: [
         SizedBox(
           width: 500,
-          child:
-          SvgPicture.asset('assets/signin/main.svg', semanticsLabel: ''),
+          child: SvgPicture.asset('assets/signin/main.svg', semanticsLabel: ''),
         ),
         const SizedBox(
           width: 32,
         ),
         CommonCard(
           width: 430,
-          child: _formWidget(context, viewModel),
+          child: _formWidget(context, viewModel, state),
         )
       ]),
     ]);
   }
 
-  Widget contentMobileWidget(BuildContext context, SignInProvider viewModel) {
+  Widget contentMobileWidget(
+      BuildContext context, SignInViewModel viewModel, SignInState state) {
     return CommonCard(
       padding: const EdgeInsets.symmetric(vertical: 60),
-      child: _formWidget(context, viewModel),
+      child: _formWidget(context, viewModel, state),
     );
   }
 
-  Widget _formWidget(BuildContext context, SignInProvider viewModel) {
+  Widget _formWidget(
+      BuildContext context, SignInViewModel viewModel, SignInState state) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
       child: Column(
@@ -81,7 +83,6 @@ class SignInPage extends BaseStlessWidget<SignInProvider> {
           const SizedBox(
             height: 16,
           ),
-
           OutBorderTextFormField(
             hintText: 'enter your email',
             keyboardType: TextInputType.emailAddress,
@@ -114,11 +115,22 @@ class SignInPage extends BaseStlessWidget<SignInProvider> {
           const SizedBox(
             height: 20,
           ),
+          if (state.loginStatus != null)
+            Text(
+                (state.loginStatus ?? false) ? 'Login Success' : 'Login Failed',
+                style: TextStyle(
+                  color: (state.loginStatus ?? false)
+                      ? CrmColors.green
+                      : CrmColors.red,
+                )),
+          const SizedBox(
+            height: 20,
+          ),
           ButtonWidget(
             type: ButtonType.primary.type,
             btnText: 'Sign in',
             onTap: () {
-              Navigator.of(context).popAndPushNamed('/');
+              viewModel.signIn(context);
             },
           ),
           const SizedBox(
@@ -149,18 +161,18 @@ class SignInPage extends BaseStlessWidget<SignInProvider> {
             children: [
               const Expanded(
                   child: Divider(
-                    height: 1,
-                    color: CrmColors.border,
-                  )),
+                height: 1,
+                color: CrmColors.border,
+              )),
               Container(
                 margin: const EdgeInsets.symmetric(horizontal: 20),
                 child: const Text('Or'),
               ),
               const Expanded(
                   child: Divider(
-                    height: 1,
-                    color: CrmColors.border,
-                  )),
+                height: 1,
+                color: CrmColors.border,
+              )),
             ],
           ),
           const SizedBox(
