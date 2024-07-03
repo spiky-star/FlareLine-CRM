@@ -37,6 +37,20 @@ class UserSettingsPage extends CrmLayout {
     );
   }
 
+  @override
+  Widget contentMobileWidget(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        _infoCardWidget(context),
+        const SizedBox(
+          height: 20,
+        ),
+        _profileCardWidget(context)
+      ],
+    );
+  }
+
   _infoCardWidget(BuildContext context) {
     return CommonCard(
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
@@ -210,7 +224,7 @@ class UserSettingsPage extends CrmLayout {
 
   _leftContainer({required String text}) {
     return SizedBox(
-      width: 250,
+      width: 200,
       child: Text(
         text,
         style: const TextStyle(color: CrmColors.paragraph),
