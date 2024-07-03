@@ -23,7 +23,7 @@ class UserSettingsPage extends CrmLayout {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Expanded(
-          child: _infoCardWidget(context),
+          child: _infoCardWidget(context, false),
           flex: 2,
         ),
         const SizedBox(
@@ -42,7 +42,7 @@ class UserSettingsPage extends CrmLayout {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        _infoCardWidget(context),
+        _infoCardWidget(context, true),
         const SizedBox(
           height: 20,
         ),
@@ -51,7 +51,7 @@ class UserSettingsPage extends CrmLayout {
     );
   }
 
-  _infoCardWidget(BuildContext context) {
+  _infoCardWidget(BuildContext context, bool isMobile) {
     return CommonCard(
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
       child: Column(
@@ -75,20 +75,23 @@ class UserSettingsPage extends CrmLayout {
           const SizedBox(
             height: 20,
           ),
+          _dropField('Language',
+              ['English(US)', "Japanese(Japan)", "Chinese(China)"], isMobile),
+          const SizedBox(
+            height: 20,
+          ),
           _dropField(
-              'Language', ['English(US)', "Japanese(Japan)", "Chinese(China)"]),
+              'Conutry',
+              [
+                '61000,Kharkiv,ULrain',
+                '61001,Kharkiv,ULrain',
+                '61002,Kharkiv,ULrain'
+              ],
+              isMobile),
           const SizedBox(
             height: 20,
           ),
-          _dropField('Conutry', [
-            '61000,Kharkiv,ULrain',
-            '61001,Kharkiv,ULrain',
-            '61002,Kharkiv,ULrain'
-          ]),
-          const SizedBox(
-            height: 20,
-          ),
-          _textField('Phone number', '(217)555-0113'),
+          _textField('Phone number', '(217)555-0113',isMobile),
           const SizedBox(
             height: 20,
           ),
@@ -96,30 +99,30 @@ class UserSettingsPage extends CrmLayout {
           const SizedBox(
             height: 20,
           ),
-          _textField('User name', 'Jenny20'),
+          _textField('User name', 'Jenny20',isMobile),
           const SizedBox(
             height: 20,
           ),
-          _textField('User surname', 'Jenny Wilson'),
+          _textField('User surname', 'Jenny Wilson',isMobile),
           const SizedBox(
             height: 20,
           ),
-          _dropField('Gender', ['Female', "Male"]),
+          _dropField('Gender', ['Female', "Male"], isMobile),
           const SizedBox(
             height: 20,
           ),
-          _textField('Your bio', 'Add a short bio...', maxlines: 5),
+          _textField('Your bio', 'Add a short bio...', maxlines: 5,isMobile),
           const SizedBox(
             height: 20,
           ),
-          _textField('Email', 'jenny.wilson@example.com'),
+          _textField('Email', 'jenny.wilson@example.com',isMobile),
           const SizedBox(
             height: 20,
           ),
           _dropField('Job', [
             "Flutter Developer",
             'Web Designer',
-          ]),
+          ],isMobile),
           const SizedBox(
             height: 20,
           ),
@@ -195,7 +198,20 @@ class UserSettingsPage extends CrmLayout {
     );
   }
 
-  _dropField(String s, List<String> list) {
+  _dropField(String s, List<String> list, bool isMobile) {
+    if (isMobile) {
+      return Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          _leftContainer(text: s),
+          const SizedBox(height: 8,),
+          SelectWidget(
+            selectionList: list,
+            textStyle: const TextStyle(fontSize: 14, color: CrmColors.heading),
+          )
+        ],
+      );
+    }
     return Row(
       children: [
         _leftContainer(text: s),
@@ -208,7 +224,15 @@ class UserSettingsPage extends CrmLayout {
     );
   }
 
-  _textField(String s, String initialValue, {int? maxlines = 1}) {
+  _textField(String s, String initialValue, bool isMobile, {int? maxlines = 1}) {
+    if(isMobile){
+      return OutBorderTextFormField(
+        initialValue: initialValue,
+        maxLines: maxlines,
+        labelText: s,
+        textStyle: const TextStyle(fontSize: 14, color: CrmColors.heading),
+      );
+    }
     return Row(
       children: [
         _leftContainer(text: s),
