@@ -9,6 +9,7 @@ import 'package:flareline_uikit/entity/table_data_entity.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:responsive_builder/responsive_builder.dart';
 
 class ContactsPage extends CrmLayout {
   const ContactsPage({super.key});
@@ -26,7 +27,7 @@ class ContactsPage extends CrmLayout {
   @override
   Widget breakTabRightWidget(BuildContext context) {
     // TODO: implement rightContentWidget
-    return  Row(
+    return Row(
       mainAxisSize: MainAxisSize.min,
       children: [
         SizedBox(
@@ -40,7 +41,7 @@ class ContactsPage extends CrmLayout {
         ),
         SizedBox(
           width: 150,
-          child:AddContactPage(),
+          child: AddContactPage(),
         )
       ],
     );
@@ -53,10 +54,11 @@ class ContactsPage extends CrmLayout {
 }
 
 class ContactsTableWidget extends TableWidget<ContactsViewModel> {
+  ContactsTableWidget({super.key});
+
   @override
   // TODO: implement showCheckboxColumn
   bool get showCheckboxColumn => true;
-
 
   @override
   Widget toolsWidget(BuildContext context, ContactsViewModel viewModel) {
@@ -64,15 +66,32 @@ class ContactsTableWidget extends TableWidget<ContactsViewModel> {
       height: 50,
       child: Row(
         children: [
-          const SizedBox(
-            width: 260,
-            child: SearchWidget(),
+          ScreenTypeLayout.builder(
+            desktop: (context) => const SizedBox(
+              width: 280,
+              child: SearchWidget(),
+            ),
+            mobile: (context) => SizedBox.shrink(),
+            tablet: (context) => SizedBox.shrink(),
           ),
           const Spacer(),
-          _pageWidget(context,viewModel)
+          _pageWidget(context, viewModel)
         ],
       ),
     );
+  }
+
+  @override
+  bool isColumnVisible(String columnName, bool isMobile) {
+    if (!isMobile) {
+      return true;
+    }
+    if (isMobile) {
+      if ('Contact Name' == columnName || 'Lead Score' == columnName) {
+        return true;
+      }
+    }
+    return false;
   }
 
   @override
@@ -99,7 +118,7 @@ class ContactsTableWidget extends TableWidget<ContactsViewModel> {
     return null;
   }
 
-  _pageWidget(BuildContext context,ContactsViewModel viewModel) {
+  _pageWidget(BuildContext context, ContactsViewModel viewModel) {
     return Row(
       children: [
         const Text('Showing'),
@@ -109,10 +128,12 @@ class ContactsTableWidget extends TableWidget<ContactsViewModel> {
         SizedBox(
           width: 80,
           height: 30,
-          child: SelectWidget(selectionList: const ['10', '20', '50'],
-          onDropdownChanged: (value){
-            viewModel.pageSize = int.parse(value);
-          },),
+          child: SelectWidget(
+            selectionList: const ['10', '20', '50'],
+            onDropdownChanged: (value) {
+              viewModel.pageSize = int.parse(value);
+            },
+          ),
         ),
         const SizedBox(
           width: 5,

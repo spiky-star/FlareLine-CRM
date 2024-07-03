@@ -9,17 +9,18 @@ import 'package:flareline_uikit/entity/table_data_entity.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:popover/popover.dart';
+import 'package:responsive_builder/responsive_builder.dart';
 
 class ContactListWidget extends TableWidget<ContactListViewModel> {
   final bool? showTitle;
   final bool? showPage;
   final String? json;
 
-  ContactListWidget({super.key, this.showTitle,this.showPage, this.json});
+  ContactListWidget({super.key, this.showTitle, this.showPage, this.json});
 
   @override
   // TODO: implement showPaging
-  bool get showPaging => (showPage??false);
+  bool get showPaging => (showPage ?? false);
 
   @override
   // TODO: implement showCheckboxColumn
@@ -41,9 +42,13 @@ class ContactListWidget extends TableWidget<ContactListViewModel> {
       height: 60,
       child: Row(
         children: [
-          const SizedBox(
-            width: 280,
-            child: SearchWidget(),
+          ScreenTypeLayout.builder(
+            desktop: (context) => const SizedBox(
+              width: 280,
+              child: SearchWidget(),
+            ),
+            mobile: (context) => SizedBox.shrink(),
+            tablet: (context) => SizedBox.shrink(),
           ),
           const Spacer(),
           SizedBox(
@@ -58,6 +63,23 @@ class ContactListWidget extends TableWidget<ContactListViewModel> {
   }
 
   @override
+  bool isColumnVisible(String columnName, bool isMobile) {
+    // TODO: implement isColumnVisible
+    if (!isMobile) {
+      return true;
+    }
+
+    if ('First Name' == columnName || 'Action' == columnName) {
+      return true;
+    }
+    return false;
+  }
+
+  @override
+  // TODO: implement actionColumnWidth
+  double get actionColumnWidth => 80;
+
+  @override
   Widget? customWidgetsBuilder(BuildContext context,
       TableDataRowsTableDataRows columnData, ContactListViewModel viewModel) {
     if ('firstName' == columnData.columnName) {
@@ -69,7 +91,7 @@ class ContactListWidget extends TableWidget<ContactListViewModel> {
             height: 60,
             isCircle: true,
           ),
-          SizedBox(
+          const SizedBox(
             width: 10,
           ),
           Text(columnData.data['name'])
@@ -82,9 +104,9 @@ class ContactListWidget extends TableWidget<ContactListViewModel> {
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(4),
             color: columnData.text == 'Active'
-                ? Color(0xFFF6FFF5)
-                : Color(0xFFF2F6FF)),
-        padding: EdgeInsets.symmetric(horizontal: 10, vertical: 3),
+                ? const Color(0xFFF6FFF5)
+                : const Color(0xFFF2F6FF)),
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 3),
         child: Text(
           columnData.text ?? '',
           style: TextStyle(
@@ -108,7 +130,7 @@ class ContactListWidget extends TableWidget<ContactListViewModel> {
 
   @override
   ContactListViewModel viewModelBuilder(BuildContext context) {
-    return ContactListViewModel(context,json);
+    return ContactListViewModel(context, json);
   }
 }
 
@@ -180,11 +202,13 @@ class ListItems extends StatelessWidget {
 
 class ContactListViewModel extends BaseTableProvider {
   String? jsonFile;
-  ContactListViewModel(super.context,this.jsonFile);
+
+  ContactListViewModel(super.context, this.jsonFile);
 
   @override
   loadData(BuildContext context) async {
-    String res = await rootBundle.loadString(jsonFile??'assets/crm/contactlist.json');
+    String res =
+        await rootBundle.loadString(jsonFile ?? 'assets/crm/contactlist.json');
 
     Map<String, dynamic> map = json.decode(res);
     TableDataEntity tableDataEntity = TableDataEntity.fromJson(map);
