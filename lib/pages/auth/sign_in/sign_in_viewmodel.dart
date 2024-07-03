@@ -11,16 +11,14 @@ class SignInViewModel extends BlocBaseViewModel<SignInState> {
     passwordController = TextEditingController(text: state.password);
   }
 
-  Future<void> signInWithGoogle(BuildContext context) async {}
+  Future<void> signInWithGoogle() async {}
 
-  Future<void> signInWithGithub(BuildContext context) async {}
+  Future<void> signInWithGithub() async {}
 
-  Future<void> signIn(BuildContext context) async {
+  Future<void> signIn() async {
     if (emailController.text.trim() == 'admin' &&
         passwordController.text.trim() == '123456') {
       emit(SignInState()..loginStatus = true);
-      Future.delayed(const Duration(seconds: 3),
-          () => Navigator.of(context).pushNamed('/'));
     } else {
       state.loginStatus = false;
     }
