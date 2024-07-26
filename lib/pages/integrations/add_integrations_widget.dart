@@ -5,11 +5,11 @@ import 'package:flareline_uikit/components/forms/outborder_text_form_field.dart'
 import 'package:flareline_uikit/components/image/image_widget.dart';
 import 'package:flareline_uikit/components/modal/modal_dialog.dart';
 import 'package:flareline_uikit/components/tables/table_widget.dart';
-import 'package:flareline_uikit/widget/base/base_stless_widget.dart';
+import 'package:flareline_uikit/core/mvvm/base_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
-class AddIntegrationsWidget extends BaseStlessWidget<AddIntegrationsViewModel> {
+class AddIntegrationsWidget extends BaseWidget<AddIntegrationsViewModel> {
   AddIntegrationsWidget({super.key});
 
   @override

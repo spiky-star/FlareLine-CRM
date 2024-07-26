@@ -1,7 +1,7 @@
 import 'package:flareline_crm/core/theme/crm_colors.dart';
 import 'package:flareline_crm/pages/auth/sign_up/sign_up_state.dart';
 import 'package:flareline_crm/pages/auth/sign_up/sign_up_viewmodel.dart';
-import 'package:flareline_uikit/widget/base/bloc_base_stless_widget.dart';
+import 'package:flareline_uikit/core/mvvm/bloc/bloc_base_stless_widget.dart';
 import 'package:flutter/material.dart';
 
 import 'package:flutter_svg/svg.dart';

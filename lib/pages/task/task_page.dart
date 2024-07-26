@@ -6,7 +6,7 @@ import 'package:flareline_crm/pages/task/task_state.dart';
 import 'package:flareline_crm/pages/task/task_viewmodel.dart';
 import 'package:flareline_uikit/components/card/common_card.dart';
 import 'package:flareline_uikit/components/image/image_widget.dart';
-import 'package:flareline_uikit/widget/base/bloc_base_stless_widget.dart';
+import 'package:flareline_uikit/core/mvvm/bloc/bloc_base_stless_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_image_stack/flutter_image_stack.dart';

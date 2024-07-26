@@ -7,7 +7,7 @@ import 'package:flareline_crm/pages/integrations/integrations_viewmodel.dart';
 import 'package:flareline_uikit/components/buttons/button_widget.dart';
 import 'package:flareline_uikit/components/card/common_card.dart';
 import 'package:flareline_uikit/components/image/image_widget.dart';
-import 'package:flareline_uikit/widget/base/bloc_base_stless_widget.dart';
+import 'package:flareline_uikit/core/mvvm/bloc/bloc_base_stless_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 

@@ -1,4 +1,6 @@
-import 'package:flareline_uikit/service/bloc/bloc_base_state.dart';
+
+
+import 'package:flareline_uikit/core/mvvm/bloc/bloc_base_state.dart';
 
 class SignUpState extends BlocBaseState{
   @override

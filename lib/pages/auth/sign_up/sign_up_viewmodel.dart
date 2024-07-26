@@ -1,5 +1,5 @@
 import 'package:flareline_crm/pages/auth/sign_up/sign_up_state.dart';
-import 'package:flareline_uikit/service/bloc/bloc_base_viewmodel.dart';
+import 'package:flareline_uikit/core/mvvm/bloc/bloc_base_viewmodel.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get_storage/get_storage.dart';
