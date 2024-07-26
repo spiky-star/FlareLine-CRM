@@ -29,11 +29,6 @@ class SignInPage extends StatelessWidget {
     ));
   }
 
-  @override
-  SignInViewModel viewModelBuilder(BuildContext context) {
-    return SignInViewModel(context);
-  }
-
   Widget contentDesktopWidget(BuildContext context) {
     return Column(mainAxisSize: MainAxisSize.min, children: [
       Row(mainAxisSize: MainAxisSize.min, children: [
