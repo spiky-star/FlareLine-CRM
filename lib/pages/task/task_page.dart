@@ -1,4 +1,4 @@
-import 'package:faker/faker.dart' as faker;
+import 'package:faker/faker.dart' as fakerRandom;
 import 'package:flareline_crm/core/theme/crm_colors.dart';
 import 'package:flareline_crm/pages/crm_layout.dart';
 import 'package:flareline_crm/pages/task/add_task_widget.dart';
@@ -50,7 +50,7 @@ class TaskPageView extends BlocBaseStlessWidget<TaskViewModel, TaskState> {
   @override
   Widget bodyWidget(
       BuildContext context, TaskViewModel viewModel, TaskState state) {
-    var faker = faker.Faker();
+    var faker = fakerRandom.Faker();
 
     return Wrap(
       runSpacing: 20,

@@ -1,7 +1,7 @@
 import 'dart:math';
 import 'dart:ui';
 
-import 'package:faker/faker.dart' as faker;
+import 'package:faker/faker.dart' as fakerRandom;
 import 'package:flareline_crm/core/theme/crm_colors.dart';
 import 'package:flareline_crm/pages/crm_layout.dart';
 import 'package:flareline_uikit/components/image/image_widget.dart';
@@ -97,7 +97,7 @@ class MonthCalendarPage extends CrmLayout {
   }
 
   List<Meeting> _getDataSource() {
-    Faker faker = faker.Faker();
+    Faker faker = fakerRandom.Faker();
 
     final DateTime today = getWeekStartDate();
 
