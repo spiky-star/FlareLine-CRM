@@ -1,4 +1,4 @@
-import 'package:faker/faker.dart';
+import 'package:faker/faker.dart' as faker;
 import 'package:flareline_crm/core/theme/crm_colors.dart';
 import 'package:flareline_crm/pages/crm_layout.dart';
 import 'package:flareline_crm/pages/deals/add_deals_widget.dart';
@@ -49,7 +49,7 @@ class DealsPageView extends BlocBaseStlessWidget<DealsViewModel,DealsState> {
   @override
   Widget bodyWidget(
       BuildContext context, DealsViewModel viewModel, DealsState state) {
-    var faker = new Faker();
+    var faker = faker.Faker();
 
     return Wrap(
       runSpacing: 20,

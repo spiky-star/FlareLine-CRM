@@ -1,4 +1,4 @@
-import 'package:faker/faker.dart';
+import 'package:faker/faker.dart' as faker;
 import 'package:flareline_crm/core/theme/crm_colors.dart';
 import 'package:flareline_crm/pages/crm_layout.dart';
 import 'package:flareline_crm/pages/integrations/add_integrations_widget.dart';
@@ -50,7 +50,7 @@ class IntegrationsPageView extends BlocBaseStlessWidget<IntegrationsViewModel,In
   @override
   Widget bodyWidget(
       BuildContext context, IntegrationsViewModel viewModel, IntegrationsState state) {
-    var faker = new Faker();
+    var faker = faker.Faker();
     List<Widget> list = List.generate(50, (i) {
       return {
         "image": 'https://picsum.photos/200?${i}',
