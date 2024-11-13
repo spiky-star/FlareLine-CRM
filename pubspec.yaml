@@ -38,15 +38,17 @@ dependencies:
 
   responsive_builder: ^0.7.0
 
-  faker: ^2.1.0
-
   flutter_image_stack: ^0.0.7
 
   syncfusion_flutter_charts: ^27.1.58
 
   syncfusion_flutter_datagrid: ^27.1.58
 
+  syncfusion_flutter_calendar: ^27.1.58
+
   popover: ^0.3.1
+
+  faker: ^2.2.0
 
   flareline_uikit:
     # git: https://github.com/FlutterFlareLine/FlareLine-UiKit.git
