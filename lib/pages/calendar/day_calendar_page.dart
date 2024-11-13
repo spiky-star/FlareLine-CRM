@@ -64,7 +64,7 @@ class DayCalendarPage extends CrmLayout {
   }
 
   List<Meeting> _getDataSource() {
-    Faker faker = fakerRandom.Faker();
+    fakerRandom.Faker faker = fakerRandom.Faker();
 
     final DateTime today = getWeekStartDate();
 
@@ -83,8 +83,8 @@ class DayCalendarPage extends CrmLayout {
         meeting = Meeting(faker.company.name(), startTime, endTime,
             Color(0xFFE1F3E8), false, Color(0xFF16AC50));
       }
-      startTime = startTime.add(Duration(hours: 2+Random().nextInt(10)));
-      endTime = startTime.add(Duration(hours: 3+Random().nextInt(6)));
+      startTime = startTime.add(Duration(hours: 2 + Random().nextInt(10)));
+      endTime = startTime.add(Duration(hours: 3 + Random().nextInt(6)));
       return meeting;
     });
 

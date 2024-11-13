@@ -50,6 +50,8 @@ dependencies:
 
   faker: ^2.2.0
 
+  google_fonts: ^6.2.1
+
   flareline_uikit:
     # git: https://github.com/FlutterFlareLine/FlareLine-UiKit.git
    path: FlareLine-UiKit

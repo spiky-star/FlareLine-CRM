@@ -97,7 +97,7 @@ class MonthCalendarPage extends CrmLayout {
   }
 
   List<Meeting> _getDataSource() {
-    Faker faker = fakerRandom.Faker();
+    fakerRandom.Faker faker = fakerRandom.Faker();
 
     final DateTime today = getWeekStartDate();
 
