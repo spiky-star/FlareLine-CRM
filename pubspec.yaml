@@ -46,6 +46,8 @@ dependencies:
 
   syncfusion_flutter_datagrid: ^27.1.58
 
+  popover: ^0.3.1
+
   flareline_uikit:
     # git: https://github.com/FlutterFlareLine/FlareLine-UiKit.git
    path: FlareLine-UiKit
